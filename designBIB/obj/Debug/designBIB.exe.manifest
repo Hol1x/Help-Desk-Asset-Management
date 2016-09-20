@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="designBIB.exe" version="1.0.1.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="designBIB" version="1.0.6103.25140" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="designBIB" version="1.0.6107.27780" language="neutral" processorArchitecture="msil" />
     <commandLine file="designBIB.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="designBIB.exe" size="79360">
-      <assemblyIdentity name="designBIB" version="1.0.6103.25140" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="designBIB.exe" size="79872">
+      <assemblyIdentity name="designBIB" version="1.0.6107.27780" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v1MSo+goJdQSERnPnDWD1B5iprMtRjemAWrJ+JwEHng=</dsig:DigestValue>
+        <dsig:DigestValue>uxrmXLvvJ+ASjEreQZXhhgM+elpM/Aog7wEm5e/n15Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -113,13 +113,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="designBIB.exe.config" size="189">
+  <file name="designBIB.exe.config" size="1203">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+      <dsig:DigestValue>zxE+qXPmA6JdGIrIDKQfNC6DDHab9moeijU70Jc3tgc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

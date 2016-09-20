@@ -8,26 +8,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.CodeDom.Compiler;
-using System.Configuration;
-using System.Runtime.CompilerServices;
-
-namespace designBIB.Properties
-{
-
-
-    [CompilerGenerated()]
-    [GeneratedCode("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : ApplicationSettingsBase
-    {
-
-        private static Settings defaultInstance = ((Settings)(Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+namespace designBIB.Properties {
+    
+    
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Klasser.xml")]
+        public string FileNameKlass {
+            get {
+                return ((string)(this["FileNameKlass"]));
+            }
+            set {
+                this["FileNameKlass"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Elever.xml")]
+        public string FileNameElever {
+            get {
+                return ((string)(this["FileNameElever"]));
+            }
+            set {
+                this["FileNameElever"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Service.xml")]
+        public string FileNameService {
+            get {
+                return ((string)(this["FileNameService"]));
+            }
+            set {
+                this["FileNameService"] = value;
             }
         }
     }

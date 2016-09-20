@@ -43,8 +43,9 @@ namespace designBIB
 
         private void frmService_Load(object sender, EventArgs e)
         {
-
-            using (var fs = new FileStream(@"service.xml",
+            
+           
+            using (var fs = new FileStream(Settings.Default.FileNameService,
                FileMode.Open, FileAccess.ReadWrite, FileShare.Read)) {
                 var xDoc = XDocument.Load(fs);
 
@@ -74,8 +75,8 @@ namespace designBIB
                 var dt = converter.ToDataTable(list);
                 dataGridView1.DataSource = dt;
                 var dataTable = (DataTable) dataGridView1.DataSource;
-                if (dataTable != null)
-                    dataTable.DefaultView.RowFilter = $"Fardig LIKE '%{"Unchecked"}%'";
+                if (dataTable == null) return;
+                dataTable.DefaultView.RowFilter = "Fardig LIKE \'%Unchecked%\'";
             }
         }
 

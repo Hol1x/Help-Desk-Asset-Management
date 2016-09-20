@@ -1,7 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="designBIB.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FileNameKlass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Klasser.xml</Value>
+    </Setting>
+    <Setting Name="FileNameElever" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Elever.xml</Value>
+    </Setting>
+    <Setting Name="FileNameService" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Service.xml</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

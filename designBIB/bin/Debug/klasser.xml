@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DocumentElement>
+  <Row>
+    <Klasser>TEKNIK 1 2016</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>TEKNIK 2 2016</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>IT 1 2016</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>IT 2 2016</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>MUM 2016</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>DEM 2016</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>TEKNIK 2015</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>IT 2015</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>MUM 2015</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>DEM 2015</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>TEKNIK 2014</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>IT 2014</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>MUM 2014</Klasser>
+    <ID>1</ID>
+  </Row>
+  <Row>
+    <Klasser>DEM 2014</Klasser>
+    <ID>1</ID>
+  </Row>
+</DocumentElement>

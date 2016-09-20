@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Students>
+	<record>
+		<Name>Marcus</Name>
+		<LastName>Nilsson</LastName>
+		<ID>1</ID>
+	</record>
+	<record>
+		<Name>Marcus</Name>
+		<LastName>Nilsson</LastName>
+		<ID>1</ID>
+	</record>
+</Students>

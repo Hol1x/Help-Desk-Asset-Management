@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DocumentElement>
+  <Row>
+    <Servicenummer>402HKZM</Servicenummer>
+    <Servicestalle>Lenovo</Servicestalle>
+    <Kontaktinformation />
+    <Serienummer>R9-0G7X9K</Serienummer>
+    <Anmalningsdatum>2016-09-08- 15:24</Anmalningsdatum>
+    <Leveransdatum>2016-09-08- 15:24</Leveransdatum>
+    <User>Filip Wall Holzer IT 2015</User>
+    <Skickad>Checked</Skickad>
+    <Fardig>Checked</Fardig>
+  </Row>
+  <Row>
+    <Servicenummer>BJBX1884-01</Servicenummer>
+    <Servicestalle>HP</Servicestalle>
+    <Kontaktinformation>hp.customer.care@hp.com</Kontaktinformation>
+    <Serienummer>5CG623637P</Serienummer>
+    <Anmalningsdatum>2016-09-08- 12:03</Anmalningsdatum>
+    <Leveransdatum>2016-09-08- 12:03</Leveransdatum>
+    <User>Filip Hrovat TEKNIK 2 2016</User>
+    <Skickad>Checked</Skickad>
+    <Fardig>Unchecked</Fardig>
+  </Row>
+  <Row>
+    <Servicenummer />
+    <Servicestalle>På Plats</Servicestalle>
+    <Kontaktinformation>Marcus.nilsson2@it-gymnasiet.se</Kontaktinformation>
+    <Serienummer>R9027Y2K</Serienummer>
+    <Anmalningsdatum>2016-09-09- 12:21</Anmalningsdatum>
+    <Leveransdatum />
+    <User>Anton Jeppsson TEKNIK 2014</User>
+    <Atgard>Ghostad</Atgard>
+    <Skickad>Unchecked</Skickad>
+    <Fardig>Checked</Fardig>
+  </Row>
+  <Row>
+    <Servicenummer />
+    <Servicestalle>På plats</Servicestalle>
+    <Kontaktinformation />
+    <Serienummer>5CG62360NQ</Serienummer>
+    <Anmalningsdatum>2016-09-09- 12:39</Anmalningsdatum>
+    <Leveransdatum />
+    <User>Emil Ahlqvist TEKNIK 1 2016</User>
+    <Atgard>Återställt fläktens värde</Atgard>
+    <Skickad>Unchecked</Skickad>
+    <Fardig>Checked</Fardig>
+  </Row>
+  <Row>
+    <Servicenummer />
+    <Servicestalle>På Plats</Servicestalle>
+    <Kontaktinformation />
+    <Serienummer>5CG6235ZWH</Serienummer>
+    <Anmalningsdatum>2016-09-09- 13:42</Anmalningsdatum>
+    <Leveransdatum />
+    <User>Alfred Ekdahl TEKNIK 2 2016</User>
+    <Felbestrivning />
+    <Atgard>Datorn ghostad</Atgard>
+    <Skickad>Unchecked</Skickad>
+    <Fardig>Checked</Fardig>
+  </Row>
+  <Row>
+    <Servicenummer />
+    <Servicestalle>På plats</Servicestalle>
+    <Kontaktinformation>Marcus.nilsson2@it-gymnasiet.se</Kontaktinformation>
+    <Serienummer>5CG62360NQ</Serienummer>
+    <Anmalningsdatum>2016-09-12- 09:11</Anmalningsdatum>
+    <Leveransdatum />
+    <User>Emil Ahlqvist TEKNIK 1 2016</User>
+    <Felbestrivning>Fläkten fungerar inte som den ska</Felbestrivning>
+    <Atgard />
+    <Skickad>Unchecked</Skickad>
+    <Fardig>Unchecked</Fardig>
+  </Row>
+  <Row>
+    <Servicenummer>
+    </Servicenummer>
+    <Servicestalle>På plats</Servicestalle>
+    <Kontaktinformation>
+    </Kontaktinformation>
+    <Serienummer>R9027Y30</Serienummer>
+    <Anmalningsdatum>2016-09-08- 12:08</Anmalningsdatum>
+    <Leveransdatum>
+    </Leveransdatum>
+    <User>Edwin Ericsson TEKNIK 2014</User>
+    <Felbeskrivning>
+    </Felbeskrivning>
+    <Atgard>Installerade om drivrutinerna till LAN Wirerd och LAN Wireless</Atgard>
+    <Skickad>Unchecked</Skickad>
+    <Fardig>Checked</Fardig>
+  </Row>
+  <Row>
+    <Servicenummer>
+    </Servicenummer>
+    <Servicestalle>på plats</Servicestalle>
+    <Kontaktinformation>Marcus Nilsson</Kontaktinformation>
+    <Serienummer>SC02RDWMRFVH3</Serienummer>
+    <Anmalningsdatum>2016-09-16- 09:53</Anmalningsdatum>
+    <Leveransdatum>
+    </Leveransdatum>
+    <User>David Ekberg Persson DEM 2016</User>
+    <Felbeskrivning>Installation fel,
+Program försvunnit,
+User Error</Felbeskrivning>
+    <Atgard>
+    </Atgard>
+    <Extra>laddare</Extra>
+    <Skickad>Unchecked</Skickad>
+    <Fardig>Unchecked</Fardig>
+  </Row>
+</DocumentElement>

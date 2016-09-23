@@ -239,6 +239,33 @@ namespace designBIB
                     @"Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                     e.Cancel = true;
+                    var dialogResult = MessageBox.Show(@"Vill du visa Serienummret nu?", @"Hjälp", MessageBoxButtons.YesNo);
+                    switch (dialogResult)
+                    {
+                        case DialogResult.Yes:
+                            var savedValue = e.FormattedValue.ToString();
+                            
+                            ((DataTable)dataGridView1.DataSource).DefaultView.RowFilter = $"Serienummer LIKE '%{savedValue}%'";
+
+                            break;
+                        case DialogResult.No:
+                            //do something else
+                            break;
+                        case DialogResult.None:
+                            break;
+                        case DialogResult.OK:
+                            break;
+                        case DialogResult.Cancel:
+                            break;
+                        case DialogResult.Abort:
+                            break;
+                        case DialogResult.Retry:
+                            break;
+                        case DialogResult.Ignore:
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
                     return;
                 }
                 dataGridView1.Rows[e.RowIndex].ErrorText = string.Empty;

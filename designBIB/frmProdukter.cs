@@ -213,13 +213,11 @@ namespace designBIB
                 // ReSharper disable once RedundantJumpStatement
             if (string.IsNullOrWhiteSpace(e.FormattedValue.ToString())) return;
 
-            else if (
-                string.IsNullOrEmpty(
+                if (!string.IsNullOrEmpty(
                     doc2.Root?.Elements("Row")
                         .Where(i => (string) i.Element("Id") == e.FormattedValue.ToString())
                         .Select(i => (string) i.Element("Id"))
-                        .FirstOrDefault()))
-            {
+                        .FirstOrDefault())) return;
                 dataGridView1.Rows[e.RowIndex].ErrorText =
                     Resources
                         .FrmProdukter_dataGridView1_CellValidating_Stämmer_inte_överens_med_något_användar_ID__kolla_stavningen_eller_lägg_till_användare;
@@ -230,32 +228,39 @@ namespace designBIB
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Cancel = true;
             }
-        }
             else if (headerText.Equals("Serienummer"))
             {
-
-
-                // Confirm that the cell is not empty.
-                var xmlfile3 = @"Produkter.xml";
-                var doc2 = XDocument.Load(xmlfile3);
-                
-
-                 if (
-                    e.FormattedValue.ToString().Equals(
-                        doc2.Root?.Elements("Row")
-                            .Where(i => (string)i.Element("Serienummer") == e.FormattedValue.ToString())
-                            .Select(i => (string)i.Element("Serienummer"))
-                            .FirstOrDefault())) {
+                if (dataGridView1.Rows.Cast<DataGridViewRow>().Where(row => row.Index != e.RowIndex & !row.IsNewRow).Any(row => row.Cells[0].Value.ToString() == e.FormattedValue.ToString()))
+                {
                     dataGridView1.Rows[e.RowIndex].ErrorText =
-                        Resources
-                            .FrmProdukter_dataGridView1_CellValidating_Stämmer_inte_överens_med_något_användar_ID__kolla_stavningen_eller_lägg_till_användare;
+                        "Duplicate value not allowed";
                     MessageBox.Show(
-                        Resources
-                            .FrmProdukter_dataGridView1_CellValidating_Stämmer_inte_överens_med_något_användar_ID__kolla_stavningen_eller_lägg_till_användare,
-                        @"Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    @"Serienummer finns redan",
+                    @"Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                     e.Cancel = true;
+                    return;
                 }
+                dataGridView1.Rows[e.RowIndex].ErrorText = string.Empty;
+            
+            // Confirm that the cell is not empty.
+            const string xmlfile3 = @"Produkter.xml";
+                var doc2 = XDocument.Load(xmlfile3);
+
+                if (string.IsNullOrWhiteSpace(e.FormattedValue.ToString())) return;
+
+                
+//                if (!string.IsNullOrEmpty(
+//                    doc2.Root?.Elements("Row")
+//                        .Where(i => (string) i.Element("Serienummer") == e.FormattedValue.ToString())
+//                        .Select(i => (string) i.Element("Serienummer"))
+//                        .FirstOrDefault())) return;
+//                dataGridView1.Rows[e.RowIndex].ErrorText = "Serienummer Error";
+//                MessageBox.Show(
+//                    @"Serienummer Error",
+//                    @"Error",
+//                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+//                e.Cancel = true;
             }
         }
 

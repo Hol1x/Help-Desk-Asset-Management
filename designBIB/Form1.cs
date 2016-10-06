@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Security.Principal;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
@@ -20,46 +19,53 @@ namespace designBIB
             InitializeComponent();
         }
 
-        public static string UserNameWhoFuckedItUp { get; private set; }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Get the latest build number to display
             Text = Text + Resources.Form1_Form1_Load__space + typeof(Form1).Assembly.GetName().Version;
+
+            // Load kunder.xml to display in combobox
             const string xmlfile = @"‪elever.xml";
             var doc = XDocument.Load(xmlfile);
             _log.Logger(xmlfile + " loaded");
-            UserNameWhoFuckedItUp = WindowsIdentity.GetCurrent().Name;
-            const string xmlfile2 = @"‪klasser.xml";
-            var doc2 = XDocument.Load(xmlfile2);
-            _log.Logger(xmlfile2 + " loaded");
-            //var node = doc.Descendants().Where(n => n.Value == metroTextBox1.Text);
-            //metroComboBox2.DataSource = node.ToList();
-            var itemType = from key in doc2.Descendants("Row").Descendants("Klasser")
-                select key.Value;
-            var namn = from key in doc.Descendants("record").Descendants("Name")
-                select key.Value + " ";
 
-            Kund_box.DataSource = itemType.ToList();
-            Enhet_box.DataSource = namn.ToList();
+            // Get all values to string array
+            //var namn = from key in doc.Descendants("Row").Descendants("Fornamn")
+            //    select key.Value + " ";
+            if (doc.Root == null) return;
+            var namn = doc.Root.Elements("Row")
+                .Select(i => (string)i.Element("Fornamn") + " " + (string)i.Element("Efternamn") + " " + (string)i.Element("Id"));
+            // put convert to list and use as datasource 
+            Kund_box.DataSource = namn.ToList();
         }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var xmlfile = "‪elever.xml";
+            const string xmlfile = "‪produkter.xml";
             metroProgressBar1.Value = 20;
             var doc = XDocument.Load(xmlfile);
 
             metroProgressBar1.Value = 40;
+            // get the id of the user
             var loadklass = Kund_box.SelectedItem.ToString();
+            var digits = loadklass.SkipWhile(c => !Char.IsDigit(c))
+            .TakeWhile(Char.IsDigit)
+            .ToArray();
 
+            var id = new string(digits);
+            
             if (doc.Root != null)
             {
-                var selectedKlass = doc.Root.Elements("Row")
-                    .Where(i => (string) i.Element("Klass") == loadklass)
-                    .Select(i => (string) i.Element("Fornamn") + " " + (string) i.Element("Efternamn"));
-
+                //populate combobox with units connected to that user id
+                var serienummer =
+                                doc.Root.Elements("Row")
+                                    .Where(i => (string)i.Element("Owner") == id)
+                                    .Select(i => (string)i.Element("Serienummer"))
+                                    ;
                 metroProgressBar1.Value = 80;
-                Enhet_box.DataSource = selectedKlass.ToList();
+                Enhet_box.DataSource = serienummer.ToList();
             }
             metroProgressBar1.Value = 100;
             //Console.Write(loadklass);
@@ -71,21 +77,7 @@ namespace designBIB
             metroProgressBar1.Value = 0;
         }
 
-        private string GetBookByTitle(string bok)
-        {
-            const string xmlfile = "‪/Bok2.xml";
-            var doc = XDocument.Load(xmlfile);
-            //metroComboBox2.DataSource = node.ToList();
-            var itemType = doc.Root?.Elements("bok").Elements("recorde")
-                .Where(i => (string) i.Element("title") == bok)
-                .Where(i => (string) i.Element("InUse") == "no")
-                .Select(i => (string) i.Element("nummer"))
-                .FirstOrDefault();
-
-            return itemType;
-        }
-
-        private string GetTimestamp(DateTime value)
+        private static string GetTimestamp(DateTime value)
         {
             return value.ToString("yyyy/MM/dd/ HH:mm");
         }
@@ -157,41 +149,6 @@ namespace designBIB
         }
 
 
-        
-   
-
-        private string ReturnedId(string keyword)
-        {
-            var xmlfile = "‪/Bok2.xml";
-            var doc = XDocument.Load(xmlfile);
-            //var node = doc.Descendants().Where(n => n.Value == metroTextBox1.Text);
-            //metroComboBox2.DataSource = node.ToList();
-            var query = doc.Descendants("bok").Descendants("recorde").Descendants("title")
-                .Where(x => !x.HasElements &&
-                            (x.Value.IndexOf(keyword, StringComparison.InvariantCultureIgnoreCase) >= 0));
-            //foreach (var element in query)
-            //Console.WriteLine(query.FirstOrDefault().Value);
-            //foreach (var element in books)
-            // Console.WriteLine(matches.First().Value);
-            var xElements = query as XElement[] ?? query.ToArray();
-            if (xElements.FirstOrDefault() != null)
-            {
-                var firstOrDefault = xElements.FirstOrDefault();
-                if (firstOrDefault != null)
-
-                {
-                    var orDefault = xElements.FirstOrDefault();
-                    if (orDefault != null) return orDefault.Value;
-                }
-                else
-                    return "";
-            }
-            else return "";
-            return null;
-        }
-
- 
-
         private void metroButton2_Click(object sender, EventArgs e)
         {
             //infoFrame frame = new infoFrame();
@@ -245,16 +202,15 @@ namespace designBIB
         {
         }
 
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void metroTextBox2_Click(object sender, EventArgs e)
-        {
-        }
-
         private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            var digits = Kund_box.SelectedItem.ToString().SkipWhile(c => !Char.IsDigit(c))
+    .TakeWhile(Char.IsDigit)
+    .ToArray();
+
+            var id2 = new string(digits);
+           
             char[] delimiterChars = {' '};
 
 
@@ -332,7 +288,7 @@ namespace designBIB
                         if (doc1.Root != null)
                             serienummer =
                                 doc1.Root.Elements("Row")
-                                    .Where(i => (string) i.Element("Owner") == id)
+                                    .Where(i => (string) i.Element("Owner") == id2)
                                     .Select(i => (string) i.Element("Serienummer"))
                                     .FirstOrDefault();
                     }
@@ -386,7 +342,7 @@ namespace designBIB
                     Servicenr_box.Text = servicenummer;
                     Service_box.Text = servicestalle;
                     Kontakt_box.Text = kontaktinformation;
-
+                    Serie_box.Text = serienummer;
                     anmalningsdatum_box.Text = anmalningsdatum;
                     utlamnings_box.Text = leveransdatum;
                     Felbeskrivning.Text = felbeskrivningValue;
@@ -421,7 +377,7 @@ namespace designBIB
 
         private void metroButton6_Click(object sender, EventArgs e)
         {
-            var form = new FrmElever();
+            var form = new FrmKunder();
             form.Show();
         }
 

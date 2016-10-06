@@ -14,13 +14,13 @@ using OfficeOpenXml;
 
 namespace designBIB
 {
-    public partial class FrmElever : MetroForm
+    public partial class FrmKunder : MetroForm
     {
         private readonly Logs _log = new Logs();
         private string _newValue;
         private string _oldValue;
 
-        public FrmElever()
+        public FrmKunder()
         {
             InitializeComponent();
         }

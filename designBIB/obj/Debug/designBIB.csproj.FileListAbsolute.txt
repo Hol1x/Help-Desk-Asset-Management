@@ -137,3 +137,6 @@ C:\Users\johannes.gronhed\Desktop\Mapp\Programmering\C#\Help-Desk-Asset-Manageme
 C:\Users\johannes.gronhed\Desktop\Mapp\Programmering\C#\Help-Desk-Asset-Management-master\Help-Desk-Asset-Management\designBIB\obj\Debug\designBIB.TrustInfo.xml
 C:\Users\johannes.gronhed\Desktop\Mapp\Programmering\C#\Help-Desk-Asset-Management-master\Help-Desk-Asset-Management\designBIB\obj\Debug\designBIB.exe.manifest
 C:\Users\johannes.gronhed\Desktop\Mapp\Programmering\C#\Help-Desk-Asset-Management-master\Help-Desk-Asset-Management\designBIB\obj\Debug\designBIB.application
+C:\Users\marcus.nilsson4\Documents\GitHub\Help-Desk-Asset-Management\designBIB\bin\Debug\designBIB.exe.config
+C:\Users\marcus.nilsson4\Documents\GitHub\Help-Desk-Asset-Management\designBIB\obj\Debug\designBIB.exe
+C:\Users\marcus.nilsson4\Documents\GitHub\Help-Desk-Asset-Management\designBIB\obj\Debug\designBIB.pdb

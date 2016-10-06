@@ -4,7 +4,7 @@ using MetroFramework.Controls;
 
 namespace designBIB
 {
-    partial class FrmElever
+    partial class FrmKunder
     {
         /// <summary>
         /// Required designer variable.
@@ -162,7 +162,7 @@ namespace designBIB
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // FrmElever
+            // FrmKunder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,7 +176,7 @@ namespace designBIB
             this.Controls.Add(this.Save_button);
             this.Controls.Add(this.dataGridView1);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "FrmElever";
+            this.Name = "FrmKunder";
             this.Text = "Elever";
             this.Load += new System.EventHandler(this.frmElever_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

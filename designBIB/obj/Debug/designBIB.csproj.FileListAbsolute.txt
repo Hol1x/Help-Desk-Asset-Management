@@ -116,3 +116,6 @@ C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.csproj.GenerateRes
 C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.TrustInfo.xml
 C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.exe.manifest
 C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.application
+C:\Users\johannes.gronhed\Desktop\Mapp\Programmering\C#\Help-Desk-Asset-Management-master\Help-Desk-Asset-Management\designBIB\bin\Debug\designBIB.exe.config
+C:\Users\johannes.gronhed\Desktop\Mapp\Programmering\C#\Help-Desk-Asset-Management-master\Help-Desk-Asset-Management\designBIB\obj\Debug\designBIB.exe
+C:\Users\johannes.gronhed\Desktop\Mapp\Programmering\C#\Help-Desk-Asset-Management-master\Help-Desk-Asset-Management\designBIB\obj\Debug\designBIB.pdb

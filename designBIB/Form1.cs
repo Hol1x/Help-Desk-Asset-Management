@@ -39,8 +39,8 @@ namespace designBIB
             var namn = from key in doc.Descendants("record").Descendants("Name")
                 select key.Value + " ";
 
-            metroComboBox1.DataSource = itemType.ToList();
-            metroComboBox2.DataSource = namn.ToList();
+            Kund_box.DataSource = itemType.ToList();
+            Enhet_box.DataSource = namn.ToList();
         }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace designBIB
             var doc = XDocument.Load(xmlfile);
 
             metroProgressBar1.Value = 40;
-            var loadklass = metroComboBox1.SelectedItem.ToString();
+            var loadklass = Kund_box.SelectedItem.ToString();
 
             if (doc.Root != null)
             {
@@ -59,7 +59,7 @@ namespace designBIB
                     .Select(i => (string) i.Element("Fornamn") + " " + (string) i.Element("Efternamn"));
 
                 metroProgressBar1.Value = 80;
-                metroComboBox2.DataSource = selectedKlass.ToList();
+                Enhet_box.DataSource = selectedKlass.ToList();
             }
             metroProgressBar1.Value = 100;
             //Console.Write(loadklass);
@@ -102,19 +102,19 @@ namespace designBIB
                 doc.Load(fs);
                 XmlNode lanad = doc.CreateElement("Row");
                 XmlNode servicenummer = doc.CreateElement("Servicenummer");
-                servicenummer.InnerText = txtServicenummer.Text;
+                servicenummer.InnerText = Servicenr_box.Text;
                 XmlNode servicestalle = doc.CreateElement("Servicestalle");
-                servicestalle.InnerText = txtServicestalle.Text;
+                servicestalle.InnerText = Service_box.Text;
                 XmlNode kontaktinformation = doc.CreateElement("Kontaktinformation");
-                kontaktinformation.InnerText = txtKontaktinformation.Text;
+                kontaktinformation.InnerText = Kontakt_box.Text;
                 XmlNode serienummer = doc.CreateElement("Serienummer");
-                serienummer.InnerText = txtSerienummer.Text;
+                serienummer.InnerText = Serie_box.Text;
                 XmlNode anmalningsdatum = doc.CreateElement("Anmalningsdatum");
-                anmalningsdatum.InnerText = txtAnmalingsdatum.Text;
+                anmalningsdatum.InnerText = anmalningsdatum_box.Text;
                 XmlNode leveransdatum = doc.CreateElement("Leveransdatum");
-                leveransdatum.InnerText = txtLeveransdatum.Text;
+                leveransdatum.InnerText = utlamnings_box.Text;
                 XmlNode user = doc.CreateElement("User");
-                user.InnerText = metroComboBox2.SelectedItem + " " + metroComboBox1.SelectedItem;
+                user.InnerText = Enhet_box.SelectedItem + " " + Kund_box.SelectedItem;
                 XmlNode felbeskrvningxml = doc.CreateElement("Felbeskrivning");
                 felbeskrvningxml.InnerText = Felbeskrivning.Text;
                 XmlNode atgardxml = doc.CreateElement("Atgard");
@@ -220,7 +220,7 @@ namespace designBIB
                 var xmlNodeList = xDoc.SelectNodes("DocumentElement/Row");
                 if (xmlNodeList != null)
                     foreach (XmlNode xNode in xmlNodeList)
-                        if ((xNode.SelectSingleNode("Serienummer")?.InnerText == txtSerienummer.Text) &&
+                        if ((xNode.SelectSingleNode("Serienummer")?.InnerText == Serie_box.Text) &&
                             (xNode.SelectSingleNode("Fardig")?.InnerText == "Unchecked"))
                         {
                             xNode.ParentNode?.RemoveChild(xNode);
@@ -241,7 +241,7 @@ namespace designBIB
                 var xmlNodeList = xDoc.SelectNodes("DocumentElement/Row");
                 if (xmlNodeList != null)
                     foreach (XmlNode xNode in xmlNodeList)
-                        if (xNode.SelectSingleNode("Serienummer")?.InnerText == txtSerienummer.Text)
+                        if (xNode.SelectSingleNode("Serienummer")?.InnerText == Serie_box.Text)
                         {
                             xNode.ParentNode?.RemoveChild(xNode);
                             metroLabel1.Text = metroLabel1.Text + @" Är nu återlämnad!";
@@ -276,12 +276,12 @@ namespace designBIB
             var doc1 = XDocument.Load(xmlfile2);
             var doc2 = XDocument.Load(xmlfile3);
 
-            txtServicenummer.Text = "";
-            txtServicestalle.Text = "";
-            txtKontaktinformation.Text = "";
+            Servicenr_box.Text = "";
+            Service_box.Text = "";
+            Kontakt_box.Text = "";
 
-            txtAnmalingsdatum.Text = "";
-            txtLeveransdatum.Text = "";
+            anmalningsdatum_box.Text = "";
+            utlamnings_box.Text = "";
 
             Felbeskrivning.Text = "";
             Atgard.Text = "";
@@ -290,8 +290,8 @@ namespace designBIB
             chkFardig.CheckState = CheckState.Unchecked;
 
             metroProgressBar1.Value = 40;
-            var loadklass = metroComboBox2.SelectedItem + " " + metroComboBox1.SelectedItem;
-            var elevNamn = metroComboBox2.SelectedItem.ToString();
+            var loadklass = Enhet_box.SelectedItem + " " + Kund_box.SelectedItem;
+            var elevNamn = Enhet_box.SelectedItem.ToString();
 
             if (doc.Root != null)
             {
@@ -330,13 +330,13 @@ namespace designBIB
                             ? doc2.Root.Elements("Row")
                                 .Where(i => (string) i.Element("Fornamn") == words[0])
                                 .Where(i => (string) i.Element("Efternamn") == words[1] + " " + words[2].Trim())
-                                .Where(i => (string) i.Element("Klass") == metroComboBox1.SelectedItem.ToString())
+                                .Where(i => (string) i.Element("Klass") == Kund_box.SelectedItem.ToString())
                                 .Select(i => (string) i.Element("Id"))
                                 .FirstOrDefault()
                             : doc2.Root.Elements("Row")
                                 .Where(i => (string) i.Element("Fornamn") == words[0])
                                 .Where(i => (string) i.Element("Efternamn") == words[1])
-                                .Where(i => (string) i.Element("Klass") == metroComboBox1.SelectedItem.ToString())
+                                .Where(i => (string) i.Element("Klass") == Kund_box.SelectedItem.ToString())
                                 .Select(i => (string) i.Element("Id"))
                                 .FirstOrDefault();
                         if (doc1.Root != null)
@@ -390,15 +390,15 @@ namespace designBIB
                         .Select(i => (string) i.Element("Fardig"))
                         .FirstOrDefault();
                 metroProgressBar1.Value = 80;
-                txtSerienummer.Text = serienummer;
+                Serie_box.Text = serienummer;
                 if (fardig == "Unchecked")
                 {
-                    txtServicenummer.Text = servicenummer;
-                    txtServicestalle.Text = servicestalle;
-                    txtKontaktinformation.Text = kontaktinformation;
+                    Servicenr_box.Text = servicenummer;
+                    Service_box.Text = servicestalle;
+                    Kontakt_box.Text = kontaktinformation;
 
-                    txtAnmalingsdatum.Text = anmalningsdatum;
-                    txtLeveransdatum.Text = leveransdatum;
+                    anmalningsdatum_box.Text = anmalningsdatum;
+                    utlamnings_box.Text = leveransdatum;
                     Felbeskrivning.Text = felbeskrivningValue;
                     Atgard.Text = atgardValue;
                     txtBoxExtra.Text = extra;
@@ -437,7 +437,7 @@ namespace designBIB
 
         private void txtAnmalingsdatum_Click(object sender, EventArgs e)
         {
-            txtAnmalingsdatum.Text = GetTimestamp(DateTime.Now);
+            anmalningsdatum_box.Text = GetTimestamp(DateTime.Now);
         }
 
         private void metroLabel15_Click(object sender, EventArgs e)

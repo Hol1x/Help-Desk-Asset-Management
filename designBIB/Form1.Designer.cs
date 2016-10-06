@@ -37,14 +37,14 @@ namespace designBIB
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.Utlamningslbl = new MetroFramework.Controls.MetroLabel();
             this.lblExtra = new MetroFramework.Controls.MetroLabel();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.lblAnmalingsdatum = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.Serienrlbl = new MetroFramework.Controls.MetroLabel();
+            this.anmalningsdatumlbl = new MetroFramework.Controls.MetroLabel();
+            this.Kontaktlbl = new MetroFramework.Controls.MetroLabel();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.Servicelbl = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -62,22 +62,22 @@ namespace designBIB
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtServicestalle = new MetroFramework.Controls.MetroTextBox();
+            this.Enhetlbl = new MetroFramework.Controls.MetroLabel();
+            this.Kund_lbl = new MetroFramework.Controls.MetroLabel();
+            this.Service_box = new MetroFramework.Controls.MetroTextBox();
             this.txtBoxExtra = new MetroFramework.Controls.MetroTextBox();
             this.Atgard = new MetroFramework.Controls.MetroTextBox();
             this.Felbeskrivning = new MetroFramework.Controls.MetroTextBox();
-            this.txtLeveransdatum = new MetroFramework.Controls.MetroTextBox();
-            this.txtSerienummer = new MetroFramework.Controls.MetroTextBox();
-            this.txtAnmalingsdatum = new MetroFramework.Controls.MetroTextBox();
-            this.txtKontaktinformation = new MetroFramework.Controls.MetroTextBox();
+            this.utlamnings_box = new MetroFramework.Controls.MetroTextBox();
+            this.Serie_box = new MetroFramework.Controls.MetroTextBox();
+            this.anmalningsdatum_box = new MetroFramework.Controls.MetroTextBox();
+            this.Kontakt_box = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtServicenummer = new MetroFramework.Controls.MetroTextBox();
+            this.Servicenr_box = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.Enhet_box = new MetroFramework.Controls.MetroComboBox();
+            this.Kund_box = new MetroFramework.Controls.MetroComboBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,14 +91,14 @@ namespace designBIB
             this.metroPanel1.Controls.Add(this.metroLabel13);
             this.metroPanel1.Controls.Add(this.metroLabel18);
             this.metroPanel1.Controls.Add(this.metroLabel17);
-            this.metroPanel1.Controls.Add(this.metroLabel16);
+            this.metroPanel1.Controls.Add(this.Utlamningslbl);
             this.metroPanel1.Controls.Add(this.lblExtra);
             this.metroPanel1.Controls.Add(this.metroLabel20);
-            this.metroPanel1.Controls.Add(this.metroLabel15);
-            this.metroPanel1.Controls.Add(this.lblAnmalingsdatum);
-            this.metroPanel1.Controls.Add(this.metroLabel14);
+            this.metroPanel1.Controls.Add(this.Serienrlbl);
+            this.metroPanel1.Controls.Add(this.anmalningsdatumlbl);
+            this.metroPanel1.Controls.Add(this.Kontaktlbl);
             this.metroPanel1.Controls.Add(this.metroLabel19);
-            this.metroPanel1.Controls.Add(this.metroLabel12);
+            this.metroPanel1.Controls.Add(this.Servicelbl);
             this.metroPanel1.Controls.Add(this.metroLabel11);
             this.metroPanel1.Controls.Add(this.metroButton6);
             this.metroPanel1.Controls.Add(this.metroLabel10);
@@ -116,22 +116,22 @@ namespace designBIB
             this.metroPanel1.Controls.Add(this.metroLabel5);
             this.metroPanel1.Controls.Add(this.metroTextBox2);
             this.metroPanel1.Controls.Add(this.metroLabel4);
-            this.metroPanel1.Controls.Add(this.metroLabel3);
-            this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.txtServicestalle);
+            this.metroPanel1.Controls.Add(this.Enhetlbl);
+            this.metroPanel1.Controls.Add(this.Kund_lbl);
+            this.metroPanel1.Controls.Add(this.Service_box);
             this.metroPanel1.Controls.Add(this.txtBoxExtra);
             this.metroPanel1.Controls.Add(this.Atgard);
             this.metroPanel1.Controls.Add(this.Felbeskrivning);
-            this.metroPanel1.Controls.Add(this.txtLeveransdatum);
-            this.metroPanel1.Controls.Add(this.txtSerienummer);
-            this.metroPanel1.Controls.Add(this.txtAnmalingsdatum);
-            this.metroPanel1.Controls.Add(this.txtKontaktinformation);
+            this.metroPanel1.Controls.Add(this.utlamnings_box);
+            this.metroPanel1.Controls.Add(this.Serie_box);
+            this.metroPanel1.Controls.Add(this.anmalningsdatum_box);
+            this.metroPanel1.Controls.Add(this.Kontakt_box);
             this.metroPanel1.Controls.Add(this.metroLabel1);
-            this.metroPanel1.Controls.Add(this.txtServicenummer);
+            this.metroPanel1.Controls.Add(this.Servicenr_box);
             this.metroPanel1.Controls.Add(this.metroTextBox1);
             this.metroPanel1.Controls.Add(this.metroProgressBar1);
-            this.metroPanel1.Controls.Add(this.metroComboBox2);
-            this.metroPanel1.Controls.Add(this.metroComboBox1);
+            this.metroPanel1.Controls.Add(this.Enhet_box);
+            this.metroPanel1.Controls.Add(this.Kund_box);
             this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.CustomBackground = false;
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -258,23 +258,23 @@ namespace designBIB
             this.metroLabel17.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel17.UseStyleColors = false;
             // 
-            // metroLabel16
+            // Utlamningslbl
             // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.CustomBackground = false;
-            this.metroLabel16.CustomForeColor = false;
-            this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel16.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel16.Location = new System.Drawing.Point(4, 224);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(142, 25);
-            this.metroLabel16.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroLabel16.StyleManager = null;
-            this.metroLabel16.TabIndex = 27;
-            this.metroLabel16.Text = "Leveransdatum";
-            this.metroLabel16.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel16.UseStyleColors = false;
+            this.Utlamningslbl.AutoSize = true;
+            this.Utlamningslbl.CustomBackground = false;
+            this.Utlamningslbl.CustomForeColor = false;
+            this.Utlamningslbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Utlamningslbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Utlamningslbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.Utlamningslbl.Location = new System.Drawing.Point(4, 224);
+            this.Utlamningslbl.Name = "Utlamningslbl";
+            this.Utlamningslbl.Size = new System.Drawing.Size(101, 25);
+            this.Utlamningslbl.Style = MetroFramework.MetroColorStyle.Green;
+            this.Utlamningslbl.StyleManager = null;
+            this.Utlamningslbl.TabIndex = 27;
+            this.Utlamningslbl.Text = "Utlämning";
+            this.Utlamningslbl.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Utlamningslbl.UseStyleColors = false;
             // 
             // lblExtra
             // 
@@ -314,60 +314,60 @@ namespace designBIB
             this.metroLabel20.UseStyleColors = false;
             this.metroLabel20.Click += new System.EventHandler(this.metroLabel15_Click);
             // 
-            // metroLabel15
+            // Serienrlbl
             // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.CustomBackground = false;
-            this.metroLabel15.CustomForeColor = false;
-            this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel15.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel15.Location = new System.Drawing.Point(4, 166);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(125, 25);
-            this.metroLabel15.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroLabel15.StyleManager = null;
-            this.metroLabel15.TabIndex = 27;
-            this.metroLabel15.Text = "Serienummer";
-            this.metroLabel15.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel15.UseStyleColors = false;
-            this.metroLabel15.Click += new System.EventHandler(this.metroLabel15_Click);
+            this.Serienrlbl.AutoSize = true;
+            this.Serienrlbl.CustomBackground = false;
+            this.Serienrlbl.CustomForeColor = false;
+            this.Serienrlbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Serienrlbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Serienrlbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.Serienrlbl.Location = new System.Drawing.Point(4, 166);
+            this.Serienrlbl.Name = "Serienrlbl";
+            this.Serienrlbl.Size = new System.Drawing.Size(125, 25);
+            this.Serienrlbl.Style = MetroFramework.MetroColorStyle.Green;
+            this.Serienrlbl.StyleManager = null;
+            this.Serienrlbl.TabIndex = 27;
+            this.Serienrlbl.Text = "Serienummer";
+            this.Serienrlbl.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Serienrlbl.UseStyleColors = false;
+            this.Serienrlbl.Click += new System.EventHandler(this.metroLabel15_Click);
             // 
-            // lblAnmalingsdatum
+            // anmalningsdatumlbl
             // 
-            this.lblAnmalingsdatum.AutoSize = true;
-            this.lblAnmalingsdatum.CustomBackground = false;
-            this.lblAnmalingsdatum.CustomForeColor = false;
-            this.lblAnmalingsdatum.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblAnmalingsdatum.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblAnmalingsdatum.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblAnmalingsdatum.Location = new System.Drawing.Point(4, 195);
-            this.lblAnmalingsdatum.Name = "lblAnmalingsdatum";
-            this.lblAnmalingsdatum.Size = new System.Drawing.Size(168, 25);
-            this.lblAnmalingsdatum.Style = MetroFramework.MetroColorStyle.Green;
-            this.lblAnmalingsdatum.StyleManager = null;
-            this.lblAnmalingsdatum.TabIndex = 27;
-            this.lblAnmalingsdatum.Text = "Anmalningsdatum";
-            this.lblAnmalingsdatum.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblAnmalingsdatum.UseStyleColors = false;
+            this.anmalningsdatumlbl.AutoSize = true;
+            this.anmalningsdatumlbl.CustomBackground = false;
+            this.anmalningsdatumlbl.CustomForeColor = false;
+            this.anmalningsdatumlbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.anmalningsdatumlbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.anmalningsdatumlbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.anmalningsdatumlbl.Location = new System.Drawing.Point(4, 195);
+            this.anmalningsdatumlbl.Name = "anmalningsdatumlbl";
+            this.anmalningsdatumlbl.Size = new System.Drawing.Size(168, 25);
+            this.anmalningsdatumlbl.Style = MetroFramework.MetroColorStyle.Green;
+            this.anmalningsdatumlbl.StyleManager = null;
+            this.anmalningsdatumlbl.TabIndex = 27;
+            this.anmalningsdatumlbl.Text = "Anmälningsdatum";
+            this.anmalningsdatumlbl.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.anmalningsdatumlbl.UseStyleColors = false;
             // 
-            // metroLabel14
+            // Kontaktlbl
             // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.CustomBackground = false;
-            this.metroLabel14.CustomForeColor = false;
-            this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel14.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel14.Location = new System.Drawing.Point(4, 137);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(181, 25);
-            this.metroLabel14.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroLabel14.StyleManager = null;
-            this.metroLabel14.TabIndex = 27;
-            this.metroLabel14.Text = "Kontaktinformation";
-            this.metroLabel14.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel14.UseStyleColors = false;
+            this.Kontaktlbl.AutoSize = true;
+            this.Kontaktlbl.CustomBackground = false;
+            this.Kontaktlbl.CustomForeColor = false;
+            this.Kontaktlbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Kontaktlbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Kontaktlbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.Kontaktlbl.Location = new System.Drawing.Point(4, 137);
+            this.Kontaktlbl.Name = "Kontaktlbl";
+            this.Kontaktlbl.Size = new System.Drawing.Size(80, 25);
+            this.Kontaktlbl.Style = MetroFramework.MetroColorStyle.Green;
+            this.Kontaktlbl.StyleManager = null;
+            this.Kontaktlbl.TabIndex = 27;
+            this.Kontaktlbl.Text = "Kontakt";
+            this.Kontaktlbl.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Kontaktlbl.UseStyleColors = false;
             // 
             // metroLabel19
             // 
@@ -387,23 +387,23 @@ namespace designBIB
             this.metroLabel19.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel19.UseStyleColors = false;
             // 
-            // metroLabel12
+            // Servicelbl
             // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.CustomBackground = false;
-            this.metroLabel12.CustomForeColor = false;
-            this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel12.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel12.Location = new System.Drawing.Point(4, 79);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(144, 25);
-            this.metroLabel12.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroLabel12.StyleManager = null;
-            this.metroLabel12.TabIndex = 27;
-            this.metroLabel12.Text = "Servicenummer";
-            this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel12.UseStyleColors = false;
+            this.Servicelbl.AutoSize = true;
+            this.Servicelbl.CustomBackground = false;
+            this.Servicelbl.CustomForeColor = false;
+            this.Servicelbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Servicelbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Servicelbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.Servicelbl.Location = new System.Drawing.Point(4, 79);
+            this.Servicelbl.Name = "Servicelbl";
+            this.Servicelbl.Size = new System.Drawing.Size(144, 25);
+            this.Servicelbl.Style = MetroFramework.MetroColorStyle.Green;
+            this.Servicelbl.StyleManager = null;
+            this.Servicelbl.TabIndex = 27;
+            this.Servicelbl.Text = "Servicenummer";
+            this.Servicelbl.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Servicelbl.UseStyleColors = false;
             // 
             // metroLabel11
             // 
@@ -706,61 +706,61 @@ namespace designBIB
             this.metroLabel4.UseStyleColors = false;
             this.metroLabel4.Visible = false;
             // 
-            // metroLabel3
+            // Enhetlbl
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.CustomBackground = false;
-            this.metroLabel3.CustomForeColor = false;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel3.Location = new System.Drawing.Point(4, 50);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(47, 25);
-            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroLabel3.StyleManager = null;
-            this.metroLabel3.TabIndex = 9;
-            this.metroLabel3.Text = "Elev";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel3.UseStyleColors = false;
+            this.Enhetlbl.AutoSize = true;
+            this.Enhetlbl.CustomBackground = false;
+            this.Enhetlbl.CustomForeColor = false;
+            this.Enhetlbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Enhetlbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Enhetlbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.Enhetlbl.Location = new System.Drawing.Point(4, 50);
+            this.Enhetlbl.Name = "Enhetlbl";
+            this.Enhetlbl.Size = new System.Drawing.Size(61, 25);
+            this.Enhetlbl.Style = MetroFramework.MetroColorStyle.Green;
+            this.Enhetlbl.StyleManager = null;
+            this.Enhetlbl.TabIndex = 9;
+            this.Enhetlbl.Text = "Enhet";
+            this.Enhetlbl.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Enhetlbl.UseStyleColors = false;
             // 
-            // metroLabel2
+            // Kund_lbl
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.CustomBackground = false;
-            this.metroLabel2.CustomForeColor = false;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel2.Location = new System.Drawing.Point(4, 15);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(55, 25);
-            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel2.StyleManager = null;
-            this.metroLabel2.TabIndex = 8;
-            this.metroLabel2.Text = "Klass";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel2.UseStyleColors = false;
+            this.Kund_lbl.AutoSize = true;
+            this.Kund_lbl.CustomBackground = false;
+            this.Kund_lbl.CustomForeColor = false;
+            this.Kund_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Kund_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Kund_lbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.Kund_lbl.Location = new System.Drawing.Point(4, 15);
+            this.Kund_lbl.Name = "Kund_lbl";
+            this.Kund_lbl.Size = new System.Drawing.Size(57, 25);
+            this.Kund_lbl.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Kund_lbl.StyleManager = null;
+            this.Kund_lbl.TabIndex = 8;
+            this.Kund_lbl.Text = "Kund";
+            this.Kund_lbl.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Kund_lbl.UseStyleColors = false;
             // 
-            // txtServicestalle
+            // Service_box
             // 
-            this.txtServicestalle.CustomBackground = false;
-            this.txtServicestalle.CustomForeColor = false;
-            this.txtServicestalle.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtServicestalle.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtServicestalle.Location = new System.Drawing.Point(191, 110);
-            this.txtServicestalle.Multiline = false;
-            this.txtServicestalle.Name = "txtServicestalle";
-            this.txtServicestalle.SelectedText = "";
-            this.txtServicestalle.Size = new System.Drawing.Size(160, 23);
-            this.txtServicestalle.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtServicestalle.StyleManager = null;
-            this.txtServicestalle.TabIndex = 4;
-            this.txtServicestalle.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtServicestalle.UseStyleColors = false;
-            this.txtServicestalle.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
-            this.txtServicestalle.Click += new System.EventHandler(this.metroTextBox1_Click);
-            this.txtServicestalle.Enter += new System.EventHandler(this.metroButton1_Click);
+            this.Service_box.CustomBackground = false;
+            this.Service_box.CustomForeColor = false;
+            this.Service_box.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.Service_box.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.Service_box.Location = new System.Drawing.Point(191, 110);
+            this.Service_box.Multiline = false;
+            this.Service_box.Name = "Service_box";
+            this.Service_box.SelectedText = "";
+            this.Service_box.Size = new System.Drawing.Size(160, 23);
+            this.Service_box.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Service_box.StyleManager = null;
+            this.Service_box.TabIndex = 4;
+            this.Service_box.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Service_box.UseStyleColors = false;
+            this.Service_box.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
+            this.Service_box.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.Service_box.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // txtBoxExtra
             // 
@@ -819,80 +819,80 @@ namespace designBIB
             this.Felbeskrivning.UseStyleColors = false;
             this.Felbeskrivning.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
-            // txtLeveransdatum
+            // utlamnings_box
             // 
-            this.txtLeveransdatum.CustomBackground = false;
-            this.txtLeveransdatum.CustomForeColor = false;
-            this.txtLeveransdatum.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtLeveransdatum.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtLeveransdatum.Location = new System.Drawing.Point(191, 226);
-            this.txtLeveransdatum.Multiline = false;
-            this.txtLeveransdatum.Name = "txtLeveransdatum";
-            this.txtLeveransdatum.SelectedText = "";
-            this.txtLeveransdatum.Size = new System.Drawing.Size(160, 23);
-            this.txtLeveransdatum.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtLeveransdatum.StyleManager = null;
-            this.txtLeveransdatum.TabIndex = 8;
-            this.txtLeveransdatum.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtLeveransdatum.UseStyleColors = false;
-            this.txtLeveransdatum.Enter += new System.EventHandler(this.metroButton1_Click);
+            this.utlamnings_box.CustomBackground = false;
+            this.utlamnings_box.CustomForeColor = false;
+            this.utlamnings_box.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.utlamnings_box.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.utlamnings_box.Location = new System.Drawing.Point(191, 226);
+            this.utlamnings_box.Multiline = false;
+            this.utlamnings_box.Name = "utlamnings_box";
+            this.utlamnings_box.SelectedText = "";
+            this.utlamnings_box.Size = new System.Drawing.Size(160, 23);
+            this.utlamnings_box.Style = MetroFramework.MetroColorStyle.Blue;
+            this.utlamnings_box.StyleManager = null;
+            this.utlamnings_box.TabIndex = 8;
+            this.utlamnings_box.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.utlamnings_box.UseStyleColors = false;
+            this.utlamnings_box.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
-            // txtSerienummer
+            // Serie_box
             // 
-            this.txtSerienummer.CustomBackground = false;
-            this.txtSerienummer.CustomForeColor = false;
-            this.txtSerienummer.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtSerienummer.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtSerienummer.Location = new System.Drawing.Point(191, 168);
-            this.txtSerienummer.Multiline = false;
-            this.txtSerienummer.Name = "txtSerienummer";
-            this.txtSerienummer.SelectedText = "";
-            this.txtSerienummer.Size = new System.Drawing.Size(160, 23);
-            this.txtSerienummer.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSerienummer.StyleManager = null;
-            this.txtSerienummer.TabIndex = 6;
-            this.txtSerienummer.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSerienummer.UseStyleColors = false;
-            this.txtSerienummer.Enter += new System.EventHandler(this.metroButton1_Click);
+            this.Serie_box.CustomBackground = false;
+            this.Serie_box.CustomForeColor = false;
+            this.Serie_box.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.Serie_box.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.Serie_box.Location = new System.Drawing.Point(191, 168);
+            this.Serie_box.Multiline = false;
+            this.Serie_box.Name = "Serie_box";
+            this.Serie_box.SelectedText = "";
+            this.Serie_box.Size = new System.Drawing.Size(160, 23);
+            this.Serie_box.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Serie_box.StyleManager = null;
+            this.Serie_box.TabIndex = 6;
+            this.Serie_box.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Serie_box.UseStyleColors = false;
+            this.Serie_box.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
-            // txtAnmalingsdatum
+            // anmalningsdatum_box
             // 
-            this.txtAnmalingsdatum.CustomBackground = false;
-            this.txtAnmalingsdatum.CustomForeColor = false;
-            this.txtAnmalingsdatum.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtAnmalingsdatum.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtAnmalingsdatum.Location = new System.Drawing.Point(191, 197);
-            this.txtAnmalingsdatum.Multiline = false;
-            this.txtAnmalingsdatum.Name = "txtAnmalingsdatum";
-            this.txtAnmalingsdatum.SelectedText = "";
-            this.txtAnmalingsdatum.Size = new System.Drawing.Size(160, 23);
-            this.txtAnmalingsdatum.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtAnmalingsdatum.StyleManager = null;
-            this.txtAnmalingsdatum.TabIndex = 7;
-            this.txtAnmalingsdatum.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtAnmalingsdatum.UseStyleColors = false;
-            this.txtAnmalingsdatum.Click += new System.EventHandler(this.txtAnmalingsdatum_Click);
-            this.txtAnmalingsdatum.Enter += new System.EventHandler(this.metroButton1_Click);
+            this.anmalningsdatum_box.CustomBackground = false;
+            this.anmalningsdatum_box.CustomForeColor = false;
+            this.anmalningsdatum_box.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.anmalningsdatum_box.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.anmalningsdatum_box.Location = new System.Drawing.Point(191, 197);
+            this.anmalningsdatum_box.Multiline = false;
+            this.anmalningsdatum_box.Name = "anmalningsdatum_box";
+            this.anmalningsdatum_box.SelectedText = "";
+            this.anmalningsdatum_box.Size = new System.Drawing.Size(160, 23);
+            this.anmalningsdatum_box.Style = MetroFramework.MetroColorStyle.Blue;
+            this.anmalningsdatum_box.StyleManager = null;
+            this.anmalningsdatum_box.TabIndex = 7;
+            this.anmalningsdatum_box.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.anmalningsdatum_box.UseStyleColors = false;
+            this.anmalningsdatum_box.Click += new System.EventHandler(this.txtAnmalingsdatum_Click);
+            this.anmalningsdatum_box.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
-            // txtKontaktinformation
+            // Kontakt_box
             // 
-            this.txtKontaktinformation.CustomBackground = false;
-            this.txtKontaktinformation.CustomForeColor = false;
-            this.txtKontaktinformation.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtKontaktinformation.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtKontaktinformation.Location = new System.Drawing.Point(191, 139);
-            this.txtKontaktinformation.Multiline = false;
-            this.txtKontaktinformation.Name = "txtKontaktinformation";
-            this.txtKontaktinformation.SelectedText = "";
-            this.txtKontaktinformation.Size = new System.Drawing.Size(160, 23);
-            this.txtKontaktinformation.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtKontaktinformation.StyleManager = null;
-            this.txtKontaktinformation.TabIndex = 5;
-            this.txtKontaktinformation.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtKontaktinformation.UseStyleColors = false;
-            this.txtKontaktinformation.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
-            this.txtKontaktinformation.Click += new System.EventHandler(this.metroTextBox1_Click);
-            this.txtKontaktinformation.Enter += new System.EventHandler(this.metroButton1_Click);
+            this.Kontakt_box.CustomBackground = false;
+            this.Kontakt_box.CustomForeColor = false;
+            this.Kontakt_box.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.Kontakt_box.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.Kontakt_box.Location = new System.Drawing.Point(191, 139);
+            this.Kontakt_box.Multiline = false;
+            this.Kontakt_box.Name = "Kontakt_box";
+            this.Kontakt_box.SelectedText = "";
+            this.Kontakt_box.Size = new System.Drawing.Size(160, 23);
+            this.Kontakt_box.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Kontakt_box.StyleManager = null;
+            this.Kontakt_box.TabIndex = 5;
+            this.Kontakt_box.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Kontakt_box.UseStyleColors = false;
+            this.Kontakt_box.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
+            this.Kontakt_box.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.Kontakt_box.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroLabel1
             // 
@@ -914,25 +914,25 @@ namespace designBIB
             this.metroLabel1.UseStyleColors = false;
             this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
             // 
-            // txtServicenummer
+            // Servicenr_box
             // 
-            this.txtServicenummer.CustomBackground = false;
-            this.txtServicenummer.CustomForeColor = false;
-            this.txtServicenummer.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtServicenummer.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtServicenummer.Location = new System.Drawing.Point(191, 81);
-            this.txtServicenummer.Multiline = false;
-            this.txtServicenummer.Name = "txtServicenummer";
-            this.txtServicenummer.SelectedText = "";
-            this.txtServicenummer.Size = new System.Drawing.Size(160, 23);
-            this.txtServicenummer.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtServicenummer.StyleManager = null;
-            this.txtServicenummer.TabIndex = 3;
-            this.txtServicenummer.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtServicenummer.UseStyleColors = false;
-            this.txtServicenummer.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
-            this.txtServicenummer.Click += new System.EventHandler(this.metroTextBox1_Click);
-            this.txtServicenummer.Enter += new System.EventHandler(this.metroButton1_Click);
+            this.Servicenr_box.CustomBackground = false;
+            this.Servicenr_box.CustomForeColor = false;
+            this.Servicenr_box.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.Servicenr_box.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.Servicenr_box.Location = new System.Drawing.Point(191, 81);
+            this.Servicenr_box.Multiline = false;
+            this.Servicenr_box.Name = "Servicenr_box";
+            this.Servicenr_box.SelectedText = "";
+            this.Servicenr_box.Size = new System.Drawing.Size(160, 23);
+            this.Servicenr_box.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Servicenr_box.StyleManager = null;
+            this.Servicenr_box.TabIndex = 3;
+            this.Servicenr_box.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Servicenr_box.UseStyleColors = false;
+            this.Servicenr_box.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
+            this.Servicenr_box.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.Servicenr_box.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroTextBox1
             // 
@@ -970,40 +970,40 @@ namespace designBIB
             this.metroProgressBar1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroProgressBar1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroComboBox2
+            // Enhet_box
             // 
-            this.metroComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.metroComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.metroComboBox2.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.metroComboBox2.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Location = new System.Drawing.Point(65, 46);
-            this.metroComboBox2.MaxDropDownItems = 5;
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(206, 29);
-            this.metroComboBox2.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroComboBox2.StyleManager = null;
-            this.metroComboBox2.TabIndex = 1;
-            this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+            this.Enhet_box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Enhet_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Enhet_box.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.Enhet_box.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.Enhet_box.FormattingEnabled = true;
+            this.Enhet_box.ItemHeight = 23;
+            this.Enhet_box.Location = new System.Drawing.Point(191, 50);
+            this.Enhet_box.MaxDropDownItems = 5;
+            this.Enhet_box.Name = "Enhet_box";
+            this.Enhet_box.Size = new System.Drawing.Size(121, 29);
+            this.Enhet_box.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Enhet_box.StyleManager = null;
+            this.Enhet_box.TabIndex = 1;
+            this.Enhet_box.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Enhet_box.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
             // 
-            // metroComboBox1
+            // Kund_box
             // 
-            this.metroComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.metroComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.metroComboBox1.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.metroComboBox1.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(112, 15);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroComboBox1.StyleManager = null;
-            this.metroComboBox1.TabIndex = 1;
-            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            this.Kund_box.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Kund_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Kund_box.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.Kund_box.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.Kund_box.FormattingEnabled = true;
+            this.Kund_box.ItemHeight = 23;
+            this.Kund_box.Location = new System.Drawing.Point(191, 15);
+            this.Kund_box.Name = "Kund_box";
+            this.Kund_box.Size = new System.Drawing.Size(121, 29);
+            this.Kund_box.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Kund_box.StyleManager = null;
+            this.Kund_box.TabIndex = 1;
+            this.Kund_box.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Kund_box.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
             // metroButton1
             // 
@@ -1040,13 +1040,13 @@ namespace designBIB
 
         private MetroPanel metroPanel1;
         private MetroButton metroButton1;
-        private MetroComboBox metroComboBox1;
-        private MetroComboBox metroComboBox2;
+        private MetroComboBox Kund_box;
+        private MetroComboBox Enhet_box;
         private MetroProgressBar metroProgressBar1;
         private MetroLabel metroLabel1;
         private MetroLabel metroLabel4;
-        private MetroLabel metroLabel3;
-        private MetroLabel metroLabel2;
+        private MetroLabel Enhetlbl;
+        private MetroLabel Kund_lbl;
         private MetroTextBox metroTextBox2;
         private MetroLabel metroLabel5;
         private MetroButton metroButton2;
@@ -1066,20 +1066,20 @@ namespace designBIB
         private MetroLabel metroLabel13;
         private MetroLabel metroLabel18;
         private MetroLabel metroLabel17;
-        private MetroLabel metroLabel16;
-        private MetroLabel lblAnmalingsdatum;
-        private MetroLabel metroLabel14;
-        private MetroLabel metroLabel12;
-        private MetroTextBox txtServicestalle;
-        private MetroTextBox txtLeveransdatum;
-        private MetroTextBox txtAnmalingsdatum;
-        private MetroTextBox txtKontaktinformation;
-        private MetroTextBox txtServicenummer;
+        private MetroLabel Utlamningslbl;
+        private MetroLabel anmalningsdatumlbl;
+        private MetroLabel Kontaktlbl;
+        private MetroLabel Servicelbl;
+        private MetroTextBox Service_box;
+        private MetroTextBox utlamnings_box;
+        private MetroTextBox anmalningsdatum_box;
+        private MetroTextBox Kontakt_box;
+        private MetroTextBox Servicenr_box;
         private MetroTextBox metroTextBox1;
         private MetroCheckBox chkFardig;
         private MetroCheckBox chkSkickad;
-        private MetroLabel metroLabel15;
-        private MetroTextBox txtSerienummer;
+        private MetroLabel Serienrlbl;
+        private MetroTextBox Serie_box;
         private MetroTextBox Felbeskrivning;
         private MetroLabel metroLabel19;
         private MetroTextBox Atgard;

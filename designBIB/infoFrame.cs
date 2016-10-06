@@ -13,24 +13,9 @@ namespace designBIB
 {
     public partial class InfoFrame : MetroForm
     {
-       
-
         public InfoFrame()
         {
             InitializeComponent();
-        }
-
-        public class Row
-        {
-            public string Id { get; set; }
-
-            public string Titel { get; set; }
-
-            public string Namn { get; set; }
-
-            public string Klass { get; set; }
-
-            public string TimeStamp { get; set; }
         }
 
         private void infoFrame_Load(object sender, EventArgs e)
@@ -42,26 +27,27 @@ namespace designBIB
 
         private void Reload()
         {
-            using (FileStream fs = new FileStream(@"dataset.xml",
-                   FileMode.Open, FileAccess.ReadWrite, FileShare.Read)) {
-                XDocument xDoc = XDocument.Load(fs);
+            using (var fs = new FileStream(@"dataset.xml",
+                FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
+            {
+                var xDoc = XDocument.Load(fs);
 
-                List<Row> items = (from r in xDoc.Elements("DocumentElement").Elements("Row")
-                                   select new Row
-                                   {
-                                       Id = (string)r.Element("ID") + "",
-                                       Titel = (string)r.Element("Titel") + "",
-                                       Namn = (string)r.Element("Namn") + "",
-                                       Klass = (string)r.Element("Klass") + "",
-                                       TimeStamp = (string)r.Element("TimeStamp") + ""
-                                   }).ToList();
+                var items = (from r in xDoc.Elements("DocumentElement").Elements("Row")
+                    select new Row
+                    {
+                        Id = (string) r.Element("ID") + "",
+                        Titel = (string) r.Element("Titel") + "",
+                        Namn = (string) r.Element("Namn") + "",
+                        Klass = (string) r.Element("Klass") + "",
+                        TimeStamp = (string) r.Element("TimeStamp") + ""
+                    }).ToList();
 
                 fs.SetLength(0);
                 xDoc.Save(fs);
                 items.ForEach(Print);
                 var list = new BindingList<Row>(items);
-                ListtoDataTableConverter converter = new ListtoDataTableConverter();
-                DataTable dt = converter.ToDataTable(list);
+                var converter = new ListtoDataTableConverter();
+                var dt = converter.ToDataTable(list);
                 dataGridView1.DataSource = dt;
             }
         }
@@ -75,48 +61,41 @@ namespace designBIB
         {
             //Console.WriteLine("pressed");
             var results = dataGridView1.SelectedRows
-                           .Cast<DataGridViewRow>()
-                           .Select(x => Convert.ToString(x.Cells[0].Value));
+                .Cast<DataGridViewRow>()
+                .Select(x => Convert.ToString(x.Cells[0].Value));
             var result = results.ToArray();
-            foreach (string value in result) {
-                Console.WriteLine(value);
-            }
-            List<string> selectedRows = new List<string>();
+            foreach (var value in result) Console.WriteLine(value);
+            var selectedRows = new List<string>();
             Console.WriteLine(selectedRows.Count);
-            foreach (DataGridViewRow r in dataGridView1.SelectedRows) {
-                selectedRows.Add(r.Cells[0].Value.ToString());
-            }
-            foreach (string value in selectedRows) {
-                Console.WriteLine(value);
-            }
+            foreach (DataGridViewRow r in dataGridView1.SelectedRows) selectedRows.Add(r.Cells[0].Value.ToString());
+            foreach (var value in selectedRows) Console.WriteLine(value);
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             //Console.WriteLine("pressed");
             var results = dataGridView1.SelectedRows
-                           .Cast<DataGridViewRow>()
-                           .Select(x => Convert.ToString(x.Cells[0].Value));
+                .Cast<DataGridViewRow>()
+                .Select(x => Convert.ToString(x.Cells[0].Value));
             var result = results.ToArray();
-            foreach (string value in result) {
+            foreach (var value in result)
+            {
                 Console.WriteLine(value);
-                using (FileStream fs = new FileStream(@"dataset.xml",
-                   FileMode.Open, FileAccess.ReadWrite, FileShare.Read)) {
-                    XmlDocument xDoc = new XmlDocument();
+                using (var fs = new FileStream(@"dataset.xml",
+                    FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
+                {
+                    var xDoc = new XmlDocument();
                     xDoc.Load(fs);
                     var xmlNodeList = xDoc.SelectNodes("DocumentElement/Row");
                     if (xmlNodeList != null)
                         foreach (XmlNode xNode in xmlNodeList)
-                            if (xNode.SelectSingleNode("Id")?.InnerText == value.Trim()) {
+                            if (xNode.SelectSingleNode("Id")?.InnerText == value.Trim())
                                 xNode.ParentNode?.RemoveChild(xNode);
-                            }
                     fs.SetLength(0);
                     xDoc.Save(fs);
                 }
             }
-            foreach (DataGridViewRow item in dataGridView1.SelectedRows) {
-                dataGridView1.Rows.RemoveAt(item.Index);
-            }
+            foreach (DataGridViewRow item in dataGridView1.SelectedRows) dataGridView1.Rows.RemoveAt(item.Index);
 
             // Check if the Starting Balance row is included in the selected rows
 
@@ -143,40 +122,38 @@ namespace designBIB
 
         private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataGridViewColumn newColumn = dataGridView1.Columns[e.ColumnIndex];
-            DataGridViewColumn oldColumn = dataGridView1.SortedColumn;
+            var newColumn = dataGridView1.Columns[e.ColumnIndex];
+            var oldColumn = dataGridView1.SortedColumn;
             ListSortDirection direction;
 
             // If oldColumn is null, then the DataGridView is not sorted.
-            if (oldColumn != null) {
-                // Sort the same column again, reversing the SortOrder.
-                if (oldColumn == newColumn &&
-                    dataGridView1.SortOrder == SortOrder.Ascending) {
+            if (oldColumn != null)
+                if ((oldColumn == newColumn) &&
+                    (dataGridView1.SortOrder == SortOrder.Ascending))
+                {
                     direction = ListSortDirection.Descending;
                 }
-                else {
+                else
+                {
                     // Sort a new column and remove the old SortGlyph.
                     direction = ListSortDirection.Ascending;
                     oldColumn.HeaderCell.SortGlyphDirection = SortOrder.None;
                 }
-            }
-            else {
-                direction = ListSortDirection.Ascending;
-            }
+            else direction = ListSortDirection.Ascending;
 
             // Sort the selected column.
             dataGridView1.Sort(newColumn, direction);
             newColumn.HeaderCell.SortGlyphDirection =
-                direction == ListSortDirection.Ascending ?
-                SortOrder.Ascending : SortOrder.Descending;
+                direction == ListSortDirection.Ascending
+                    ? SortOrder.Ascending
+                    : SortOrder.Descending;
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             // Put each of the columns into programmatic sort mode.
-            foreach (DataGridViewColumn column in dataGridView1.Columns) {
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
                 column.SortMode = DataGridViewColumnSortMode.Programmatic;
-            }
         }
 
         private void Save_button_Click(object sender, EventArgs e)
@@ -187,8 +164,8 @@ namespace designBIB
         private void Save()
 
         {
-            string path = @"dataset.xml";
-            DataTable ds = dataGridView1.DataSource as DataTable;
+            var path = @"dataset.xml";
+            var ds = dataGridView1.DataSource as DataTable;
             ds?.WriteXml(path);
         }
 
@@ -200,7 +177,8 @@ namespace designBIB
         private void EditMode(bool enabled)
         {
             Console.WriteLine(enabled);
-            if (!enabled) {
+            if (!enabled)
+            {
                 ManualAdd_ID.Enabled = false;
                 ManualAdd_Namn.Enabled = false;
                 ManualAdd_Klass.Enabled = false;
@@ -221,18 +199,19 @@ namespace designBIB
 
         private void ManualAdd_Tid_Click(object sender, EventArgs e)
         {
-            DateTime date = DateTime.Now;
+            var date = DateTime.Now;
             ManualAdd_Tid.Text = GetTimestamp(date);
         }
 
-        private String GetTimestamp(DateTime value)
+        private string GetTimestamp(DateTime value)
         {
             return value.ToString("yyyy/MM/dd/ HH:mm:ss:fff");
         }
 
         private void ManualAdd_AddButton_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(ManualAdd_ID.Text, ManualAdd_Titel.Text, ManualAdd_Namn.Text, ManualAdd_Klass.Text, ManualAdd_Tid.Text);
+            dataGridView1.Rows.Add(ManualAdd_ID.Text, ManualAdd_Titel.Text, ManualAdd_Namn.Text, ManualAdd_Klass.Text,
+                ManualAdd_Tid.Text);
         }
 
         private void metroLabel5_Click(object sender, EventArgs e)
@@ -241,7 +220,19 @@ namespace designBIB
 
         private void metroLabel1_Click(object sender, EventArgs e)
         {
+        }
 
+        public class Row
+        {
+            public string Id { get; set; }
+
+            public string Titel { get; set; }
+
+            public string Namn { get; set; }
+
+            public string Klass { get; set; }
+
+            public string TimeStamp { get; set; }
         }
     }
 }

@@ -60,57 +60,45 @@
     <Fardig>Checked</Fardig>
   </Row>
   <Row>
-    <Servicenummer>
-    </Servicenummer>
+    <Servicenummer></Servicenummer>
     <Servicestalle>På plats</Servicestalle>
-    <Kontaktinformation>
-    </Kontaktinformation>
+    <Kontaktinformation></Kontaktinformation>
     <Serienummer>R9027Y30</Serienummer>
     <Anmalningsdatum>2016-09-08- 12:08</Anmalningsdatum>
-    <Leveransdatum>
-    </Leveransdatum>
+    <Leveransdatum></Leveransdatum>
     <User>Edwin Ericsson TEKNIK 2014</User>
-    <Felbeskrivning>
-    </Felbeskrivning>
+    <Felbeskrivning></Felbeskrivning>
     <Atgard>Installerade om drivrutinerna till LAN Wirerd och LAN Wireless</Atgard>
     <Skickad>Unchecked</Skickad>
     <Fardig>Checked</Fardig>
   </Row>
   <Row>
-    <Servicenummer>
-    </Servicenummer>
+    <Servicenummer></Servicenummer>
     <Servicestalle>på plats</Servicestalle>
     <Kontaktinformation>Marcus Nilsson</Kontaktinformation>
     <Serienummer>SC02RDWMRFVH3</Serienummer>
     <Anmalningsdatum>2016-09-16- 09:53</Anmalningsdatum>
-    <Leveransdatum>
-    </Leveransdatum>
+    <Leveransdatum></Leveransdatum>
     <User>David Ekberg Persson DEM 2016</User>
     <Felbeskrivning>Installation fel,
 Program försvunnit,
 User Error</Felbeskrivning>
-    <Atgard>
-    </Atgard>
+    <Atgard></Atgard>
     <Extra>laddare</Extra>
     <Skickad>Unchecked</Skickad>
     <Fardig>Unchecked</Fardig>
   </Row>
   <Row>
-    <Servicenummer>
-    </Servicenummer>
+    <Servicenummer></Servicenummer>
     <Servicestalle>På plats</Servicestalle>
     <Kontaktinformation>Marcus.nilsson2@it-gymnasiet.se</Kontaktinformation>
     <Serienummer>5CG62360NQ</Serienummer>
     <Anmalningsdatum>2016-09-12- 09:11</Anmalningsdatum>
-    <Leveransdatum>
-    </Leveransdatum>
+    <Leveransdatum></Leveransdatum>
     <User>Emil Ahlqvist TEKNIK 1 2016</User>
-    <Felbeskrivning>
-    </Felbeskrivning>
-    <Atgard>
-    </Atgard>
-    <Extra>
-    </Extra>
+    <Felbeskrivning></Felbeskrivning>
+    <Atgard></Atgard>
+    <Extra></Extra>
     <Skickad>Unchecked</Skickad>
     <Fardig>Unchecked</Fardig>
   </Row>

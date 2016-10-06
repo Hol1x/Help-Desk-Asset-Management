@@ -15,12 +15,6 @@ namespace designBIB
             InitializeComponent();
         }
 
-        private class Row
-        {
-            public string Klasser { get; set; }
-            public string Id { get; set; }
-        }
-
         private static void Print(Row obj)
         {
             Console.WriteLine(obj.ToString());
@@ -28,29 +22,28 @@ namespace designBIB
 
         private void KlasserSettings_Load(object sender, EventArgs e)
         {
-           
-                using (FileStream fs = new FileStream(@"klasser.xml",
-                   FileMode.Open, FileAccess.ReadWrite, FileShare.Read)) {
-                    var xDoc = XDocument.Load(fs);
+            using (var fs = new FileStream(@"klasser.xml",
+                FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
+            {
+                var xDoc = XDocument.Load(fs);
 
-                    var items = (from r in xDoc.Elements("DocumentElement").Elements("Row")
-                                       select new Row
-                                       {
-                                           Klasser = (string)r.Element("Klasser") + "",
-                                           Id = (string)r.Element("ID")+""
-                                           
-                                       }).ToList();
+                var items = (from r in xDoc.Elements("DocumentElement").Elements("Row")
+                    select new Row
+                    {
+                        Klasser = (string) r.Element("Klasser") + "",
+                        Id = (string) r.Element("ID") + ""
+                    }).ToList();
 
-                    fs.SetLength(0);
-                    xDoc.Save(fs);
-                    items.ForEach(Print);
-                    var list = new BindingList<Row>(items);
-                    var converter = new ListtoDataTableConverter();
-                    var dt = converter.ToDataTable(list);
-                    dataGridView1.DataSource = dt;
-                }
+                fs.SetLength(0);
+                xDoc.Save(fs);
+                items.ForEach(Print);
+                var list = new BindingList<Row>(items);
+                var converter = new ListtoDataTableConverter();
+                var dt = converter.ToDataTable(list);
+                dataGridView1.DataSource = dt;
             }
-        
+        }
+
 
         private void Save_button_Click(object sender, EventArgs e)
         {
@@ -72,13 +65,17 @@ namespace designBIB
             //var node = doc.Descendants().Where(n => n.Value == metroTextBox1.Text);
             //metroComboBox2.DataSource = node.ToList();
             var itemType = doc.Root?.Elements("Row")
-                   .Where(i => string.IsNullOrWhiteSpace((string)i.Element("Owner")))
-                   ;
+                    .Where(i => string.IsNullOrWhiteSpace((string) i.Element("Owner")))
+                ;
 
             if (itemType == null) return;
-            foreach (var ex in itemType) {
-                Console.WriteLine(ex.ToString());
-            }
+            foreach (var ex in itemType) Console.WriteLine(ex.ToString());
+        }
+
+        private class Row
+        {
+            public string Klasser { get; set; }
+            public string Id { get; set; }
         }
     }
 }

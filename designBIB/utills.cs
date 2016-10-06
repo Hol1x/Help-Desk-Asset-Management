@@ -2,9 +2,10 @@
 
 namespace designBIB
 {
-    class Utills
+    internal class Utills
     {
-        public static bool FileCheck(string fileToCheck) {
+        public static bool FileCheck(string fileToCheck)
+        {
             return File.Exists(fileToCheck);
         }
     }

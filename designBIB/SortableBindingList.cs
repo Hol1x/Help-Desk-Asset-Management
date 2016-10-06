@@ -5,9 +5,9 @@ using System.ComponentModel;
 namespace designBIB
 {
     /// <summary>
-    /// Provides a generic collection that supports data binding and additionally supports sorting.
-    /// See http://msdn.microsoft.com/en-us/library/ms993236.aspx
-    /// If the elements are IComparable it uses that; otherwise compares the ToString()
+    ///     Provides a generic collection that supports data binding and additionally supports sorting.
+    ///     See http://msdn.microsoft.com/en-us/library/ms993236.aspx
+    ///     If the elements are IComparable it uses that; otherwise compares the ToString()
     /// </summary>
     /// <typeparam name="T">The type of elements in the list.</typeparam>
     public class SortableBindingList<T> : BindingList<T> where T : class
@@ -17,23 +17,26 @@ namespace designBIB
         private PropertyDescriptor _sortProperty;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SortableBindingList{T}"/> class.
+        ///     Initializes a new instance of the <see cref="SortableBindingList{T}" /> class.
         /// </summary>
         public SortableBindingList()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SortableBindingList{T}"/> class.
+        ///     Initializes a new instance of the <see cref="SortableBindingList{T}" /> class.
         /// </summary>
-        /// <param name="list">An <see cref="T:System.Collections.Generic.IList`1" /> of items to be contained in the <see cref="T:System.ComponentModel.BindingList`1" />.</param>
+        /// <param name="list">
+        ///     An <see cref="T:System.Collections.Generic.IList`1" /> of items to be contained in the
+        ///     <see cref="T:System.ComponentModel.BindingList`1" />.
+        /// </param>
         public SortableBindingList(IList<T> list)
             : base(list)
         {
         }
 
         /// <summary>
-        /// Gets a value indicating whether the list supports sorting.
+        ///     Gets a value indicating whether the list supports sorting.
         /// </summary>
         protected override bool SupportsSortingCore
         {
@@ -41,7 +44,7 @@ namespace designBIB
         }
 
         /// <summary>
-        /// Gets a value indicating whether the list is sorted.
+        ///     Gets a value indicating whether the list is sorted.
         /// </summary>
         protected override bool IsSortedCore
         {
@@ -49,7 +52,7 @@ namespace designBIB
         }
 
         /// <summary>
-        /// Gets the direction the list is sorted.
+        ///     Gets the direction the list is sorted.
         /// </summary>
         protected override ListSortDirection SortDirectionCore
         {
@@ -57,12 +60,13 @@ namespace designBIB
         }
 
         /// <summary>
-        /// Gets the property descriptor that is used for sorting the list if sorting is implemented in a derived class; otherwise, returns null
+        ///     Gets the property descriptor that is used for sorting the list if sorting is implemented in a derived class;
+        ///     otherwise, returns null
         /// </summary>
         protected override PropertyDescriptor SortPropertyCore => _sortProperty;
 
         /// <summary>
-        /// Removes any sort applied with ApplySortCore if sorting is implemented
+        ///     Removes any sort applied with ApplySortCore if sorting is implemented
         /// </summary>
         protected override void RemoveSortCore()
         {
@@ -72,7 +76,7 @@ namespace designBIB
         }
 
         /// <summary>
-        /// Sorts the items if overridden in a derived class
+        ///     Sorts the items if overridden in a derived class
         /// </summary>
         /// <param name="prop"></param>
         /// <param name="direction"></param>
@@ -81,7 +85,7 @@ namespace designBIB
             _sortProperty = prop;
             _sortDirection = direction;
 
-            List<T> list = Items as List<T>;
+            var list = Items as List<T>;
             if (list == null) return;
 
             list.Sort(Compare);
@@ -102,19 +106,15 @@ namespace designBIB
 
         private int OnComparison(T lhs, T rhs)
         {
-            object lhsValue = lhs == null ? null : _sortProperty.GetValue(lhs);
-            object rhsValue = rhs == null ? null : _sortProperty.GetValue(rhs);
-            if (lhsValue == null) {
-                return (rhsValue == null) ? 0 : -1; //nulls are equal
-            }
-            if (rhsValue == null) {
-                return 1; //first has value, second doesn't
-            }
+            var lhsValue = lhs == null ? null : _sortProperty.GetValue(lhs);
+            var rhsValue = rhs == null ? null : _sortProperty.GetValue(rhs);
+            if (lhsValue == null) return rhsValue == null ? 0 : -1; //nulls are equal
+            if (rhsValue == null) return 1; //first has value, second doesn't
             var value = lhsValue as IComparable;
-            if (value != null) {
-                return value.CompareTo(rhsValue);
-            }
-            return lhsValue.Equals(rhsValue) ? 0 : string.Compare(lhsValue.ToString(), rhsValue.ToString(), StringComparison.Ordinal);
+            if (value != null) return value.CompareTo(rhsValue);
+            return lhsValue.Equals(rhsValue)
+                ? 0
+                : string.Compare(lhsValue.ToString(), rhsValue.ToString(), StringComparison.Ordinal);
             //not comparable, compare ToString
         }
     }

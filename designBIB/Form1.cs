@@ -157,12 +157,8 @@ namespace designBIB
         }
 
 
-        private void metroTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            //metroLabel1.Text = SearchResults;
-            metroID.Text = metroTextBox1.Text;
-            //metroTextBox2.Text = SearchResults;
-        }
+        
+   
 
         private string ReturnedId(string keyword)
         {
@@ -194,13 +190,7 @@ namespace designBIB
             return null;
         }
 
-        private void metroTextBox2_TextChanged(object sender, EventArgs e)
-        {
-            var seachResults = ReturnedId(metroTextBox2.Text);
-            metroLabel1.Text = seachResults;
-
-            metroTextBox1.Text = GetBookByTitle(seachResults);
-        }
+ 
 
         private void metroButton2_Click(object sender, EventArgs e)
         {

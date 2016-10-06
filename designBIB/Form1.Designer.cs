@@ -38,6 +38,7 @@ namespace designBIB
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.lblExtra = new MetroFramework.Controls.MetroLabel();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.lblAnmalingsdatum = new MetroFramework.Controls.MetroLabel();
@@ -64,6 +65,7 @@ namespace designBIB
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtServicestalle = new MetroFramework.Controls.MetroTextBox();
+            this.txtBoxExtra = new MetroFramework.Controls.MetroTextBox();
             this.Atgard = new MetroFramework.Controls.MetroTextBox();
             this.Felbeskrivning = new MetroFramework.Controls.MetroTextBox();
             this.txtLeveransdatum = new MetroFramework.Controls.MetroTextBox();
@@ -77,8 +79,6 @@ namespace designBIB
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.txtBoxExtra = new MetroFramework.Controls.MetroTextBox();
-            this.lblExtra = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,11 +178,12 @@ namespace designBIB
             this.chkFardig.Size = new System.Drawing.Size(26, 15);
             this.chkFardig.Style = MetroFramework.MetroColorStyle.Blue;
             this.chkFardig.StyleManager = null;
-            this.chkFardig.TabIndex = 28;
+            this.chkFardig.TabIndex = 13;
             this.chkFardig.Text = " ";
             this.chkFardig.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.chkFardig.UseStyleColors = false;
             this.chkFardig.UseVisualStyleBackColor = true;
+            this.chkFardig.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // chkSkickad
             // 
@@ -196,11 +197,12 @@ namespace designBIB
             this.chkSkickad.Size = new System.Drawing.Size(26, 15);
             this.chkSkickad.Style = MetroFramework.MetroColorStyle.Blue;
             this.chkSkickad.StyleManager = null;
-            this.chkSkickad.TabIndex = 28;
+            this.chkSkickad.TabIndex = 12;
             this.chkSkickad.Text = " ";
             this.chkSkickad.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.chkSkickad.UseStyleColors = false;
             this.chkSkickad.UseVisualStyleBackColor = true;
+            this.chkSkickad.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroLabel13
             // 
@@ -212,7 +214,7 @@ namespace designBIB
             this.metroLabel13.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel13.Location = new System.Drawing.Point(4, 108);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(118, 25);
+            this.metroLabel13.Size = new System.Drawing.Size(119, 25);
             this.metroLabel13.Style = MetroFramework.MetroColorStyle.Green;
             this.metroLabel13.StyleManager = null;
             this.metroLabel13.TabIndex = 27;
@@ -230,7 +232,7 @@ namespace designBIB
             this.metroLabel18.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel18.Location = new System.Drawing.Point(395, 385);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(65, 25);
+            this.metroLabel18.Size = new System.Drawing.Size(64, 25);
             this.metroLabel18.Style = MetroFramework.MetroColorStyle.Green;
             this.metroLabel18.StyleManager = null;
             this.metroLabel18.TabIndex = 27;
@@ -273,6 +275,25 @@ namespace designBIB
             this.metroLabel16.Text = "Leveransdatum";
             this.metroLabel16.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel16.UseStyleColors = false;
+            // 
+            // lblExtra
+            // 
+            this.lblExtra.AutoSize = true;
+            this.lblExtra.CustomBackground = false;
+            this.lblExtra.CustomForeColor = false;
+            this.lblExtra.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblExtra.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblExtra.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblExtra.Location = new System.Drawing.Point(395, 166);
+            this.lblExtra.Name = "lblExtra";
+            this.lblExtra.Size = new System.Drawing.Size(56, 25);
+            this.lblExtra.Style = MetroFramework.MetroColorStyle.Green;
+            this.lblExtra.StyleManager = null;
+            this.lblExtra.TabIndex = 27;
+            this.lblExtra.Text = "Extra";
+            this.lblExtra.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lblExtra.UseStyleColors = false;
+            this.lblExtra.Click += new System.EventHandler(this.metroLabel15_Click);
             // 
             // metroLabel20
             // 
@@ -376,7 +397,7 @@ namespace designBIB
             this.metroLabel12.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel12.Location = new System.Drawing.Point(4, 79);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(144, 25);
+            this.metroLabel12.Size = new System.Drawing.Size(145, 25);
             this.metroLabel12.Style = MetroFramework.MetroColorStyle.Green;
             this.metroLabel12.StyleManager = null;
             this.metroLabel12.TabIndex = 27;
@@ -428,7 +449,7 @@ namespace designBIB
             this.metroLabel10.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel10.Location = new System.Drawing.Point(1016, 12);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(51, 19);
             this.metroLabel10.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel10.StyleManager = null;
             this.metroLabel10.TabIndex = 24;
@@ -622,7 +643,7 @@ namespace designBIB
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroButton2.StyleManager = null;
-            this.metroButton2.TabIndex = 13;
+            this.metroButton2.TabIndex = 28;
             this.metroButton2.Text = "Administrera";
             this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
@@ -659,7 +680,7 @@ namespace designBIB
             this.metroTextBox2.Size = new System.Drawing.Size(160, 23);
             this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox2.StyleManager = null;
-            this.metroTextBox2.TabIndex = 11;
+            this.metroTextBox2.TabIndex = 31;
             this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBox2.UseStyleColors = false;
             this.metroTextBox2.Visible = false;
@@ -734,11 +755,31 @@ namespace designBIB
             this.txtServicestalle.Size = new System.Drawing.Size(160, 23);
             this.txtServicestalle.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtServicestalle.StyleManager = null;
-            this.txtServicestalle.TabIndex = 6;
+            this.txtServicestalle.TabIndex = 4;
             this.txtServicestalle.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtServicestalle.UseStyleColors = false;
             this.txtServicestalle.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
             this.txtServicestalle.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.txtServicestalle.Enter += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // txtBoxExtra
+            // 
+            this.txtBoxExtra.AllowDrop = true;
+            this.txtBoxExtra.CustomBackground = false;
+            this.txtBoxExtra.CustomForeColor = false;
+            this.txtBoxExtra.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.txtBoxExtra.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtBoxExtra.Location = new System.Drawing.Point(536, 166);
+            this.txtBoxExtra.Multiline = true;
+            this.txtBoxExtra.Name = "txtBoxExtra";
+            this.txtBoxExtra.SelectedText = "";
+            this.txtBoxExtra.Size = new System.Drawing.Size(160, 81);
+            this.txtBoxExtra.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxExtra.StyleManager = null;
+            this.txtBoxExtra.TabIndex = 10;
+            this.txtBoxExtra.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtBoxExtra.UseStyleColors = false;
+            this.txtBoxExtra.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // Atgard
             // 
@@ -754,9 +795,10 @@ namespace designBIB
             this.Atgard.Size = new System.Drawing.Size(160, 81);
             this.Atgard.Style = MetroFramework.MetroColorStyle.Blue;
             this.Atgard.StyleManager = null;
-            this.Atgard.TabIndex = 6;
+            this.Atgard.TabIndex = 11;
             this.Atgard.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Atgard.UseStyleColors = false;
+            this.Atgard.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // Felbeskrivning
             // 
@@ -772,9 +814,10 @@ namespace designBIB
             this.Felbeskrivning.Size = new System.Drawing.Size(160, 81);
             this.Felbeskrivning.Style = MetroFramework.MetroColorStyle.Blue;
             this.Felbeskrivning.StyleManager = null;
-            this.Felbeskrivning.TabIndex = 6;
+            this.Felbeskrivning.TabIndex = 9;
             this.Felbeskrivning.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Felbeskrivning.UseStyleColors = false;
+            this.Felbeskrivning.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // txtLeveransdatum
             // 
@@ -789,9 +832,10 @@ namespace designBIB
             this.txtLeveransdatum.Size = new System.Drawing.Size(160, 23);
             this.txtLeveransdatum.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLeveransdatum.StyleManager = null;
-            this.txtLeveransdatum.TabIndex = 6;
+            this.txtLeveransdatum.TabIndex = 8;
             this.txtLeveransdatum.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtLeveransdatum.UseStyleColors = false;
+            this.txtLeveransdatum.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // txtSerienummer
             // 
@@ -809,6 +853,7 @@ namespace designBIB
             this.txtSerienummer.TabIndex = 6;
             this.txtSerienummer.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtSerienummer.UseStyleColors = false;
+            this.txtSerienummer.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // txtAnmalingsdatum
             // 
@@ -823,10 +868,11 @@ namespace designBIB
             this.txtAnmalingsdatum.Size = new System.Drawing.Size(160, 23);
             this.txtAnmalingsdatum.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAnmalingsdatum.StyleManager = null;
-            this.txtAnmalingsdatum.TabIndex = 6;
+            this.txtAnmalingsdatum.TabIndex = 7;
             this.txtAnmalingsdatum.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtAnmalingsdatum.UseStyleColors = false;
             this.txtAnmalingsdatum.Click += new System.EventHandler(this.txtAnmalingsdatum_Click);
+            this.txtAnmalingsdatum.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // txtKontaktinformation
             // 
@@ -841,11 +887,12 @@ namespace designBIB
             this.txtKontaktinformation.Size = new System.Drawing.Size(160, 23);
             this.txtKontaktinformation.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtKontaktinformation.StyleManager = null;
-            this.txtKontaktinformation.TabIndex = 6;
+            this.txtKontaktinformation.TabIndex = 5;
             this.txtKontaktinformation.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtKontaktinformation.UseStyleColors = false;
             this.txtKontaktinformation.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
             this.txtKontaktinformation.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.txtKontaktinformation.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroLabel1
             // 
@@ -880,11 +927,12 @@ namespace designBIB
             this.txtServicenummer.Size = new System.Drawing.Size(160, 23);
             this.txtServicenummer.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtServicenummer.StyleManager = null;
-            this.txtServicenummer.TabIndex = 6;
+            this.txtServicenummer.TabIndex = 3;
             this.txtServicenummer.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtServicenummer.UseStyleColors = false;
             this.txtServicenummer.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
             this.txtServicenummer.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.txtServicenummer.Enter += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroTextBox1
             // 
@@ -899,7 +947,7 @@ namespace designBIB
             this.metroTextBox1.Size = new System.Drawing.Size(160, 23);
             this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox1.StyleManager = null;
-            this.metroTextBox1.TabIndex = 6;
+            this.metroTextBox1.TabIndex = 30;
             this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBox1.UseStyleColors = false;
             this.metroTextBox1.Visible = false;
@@ -936,7 +984,7 @@ namespace designBIB
             this.metroComboBox2.Size = new System.Drawing.Size(206, 29);
             this.metroComboBox2.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroComboBox2.StyleManager = null;
-            this.metroComboBox2.TabIndex = 4;
+            this.metroComboBox2.TabIndex = 1;
             this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
             // 
@@ -953,7 +1001,7 @@ namespace designBIB
             this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
             this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroComboBox1.StyleManager = null;
-            this.metroComboBox1.TabIndex = 3;
+            this.metroComboBox1.TabIndex = 1;
             this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
@@ -971,43 +1019,6 @@ namespace designBIB
             this.metroButton1.Text = "Update";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // txtBoxExtra
-            // 
-            this.txtBoxExtra.AllowDrop = true;
-            this.txtBoxExtra.CustomBackground = false;
-            this.txtBoxExtra.CustomForeColor = false;
-            this.txtBoxExtra.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtBoxExtra.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtBoxExtra.Location = new System.Drawing.Point(536, 166);
-            this.txtBoxExtra.Multiline = true;
-            this.txtBoxExtra.Name = "txtBoxExtra";
-            this.txtBoxExtra.SelectedText = "";
-            this.txtBoxExtra.Size = new System.Drawing.Size(160, 81);
-            this.txtBoxExtra.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBoxExtra.StyleManager = null;
-            this.txtBoxExtra.TabIndex = 6;
-            this.txtBoxExtra.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtBoxExtra.UseStyleColors = false;
-            // 
-            // lblExtra
-            // 
-            this.lblExtra.AutoSize = true;
-            this.lblExtra.CustomBackground = false;
-            this.lblExtra.CustomForeColor = false;
-            this.lblExtra.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblExtra.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblExtra.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblExtra.Location = new System.Drawing.Point(395, 166);
-            this.lblExtra.Name = "lblExtra";
-            this.lblExtra.Size = new System.Drawing.Size(56, 25);
-            this.lblExtra.Style = MetroFramework.MetroColorStyle.Green;
-            this.lblExtra.StyleManager = null;
-            this.lblExtra.TabIndex = 27;
-            this.lblExtra.Text = "Extra";
-            this.lblExtra.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lblExtra.UseStyleColors = false;
-            this.lblExtra.Click += new System.EventHandler(this.metroLabel15_Click);
             // 
             // Form1
             // 

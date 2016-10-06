@@ -16,6 +16,10 @@ namespace designBIB
 {
     public partial class FrmElever : MetroForm
     {
+        private readonly Logs _log = new Logs();
+        private string _oldValue;
+        private string _newValue;
+
         public FrmElever()
         {
             InitializeComponent();
@@ -198,6 +202,7 @@ namespace designBIB
         }
         private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
+            _log.Logger(e.FormattedValue.ToString());
             string headerText =
     dataGridView1.Columns[e.ColumnIndex].HeaderText;
 
@@ -214,6 +219,21 @@ namespace designBIB
                 MessageBox.Show(@"Det går inte att lägga till en användare ut en unik identifierare (Schoolsoft användarnamn)", @"Error",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Cancel = true;
+            }
+        }
+        
+        private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            _oldValue = (string) dataGridView1[e.ColumnIndex, e.RowIndex].Value;
+        }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            _newValue = (string) dataGridView1[e.ColumnIndex, e.RowIndex].Value;
+
+            if (_newValue != _oldValue)
+            {
+                _log.Logger("changed value: " + _oldValue + " To: "+ _newValue);
             }
         }
     }

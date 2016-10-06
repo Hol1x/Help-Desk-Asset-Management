@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="designBIB.exe" version="1.0.1.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="designBIB" version="1.0.6110.18865" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="designBIB" version="1.0.6123.22009" language="neutral" processorArchitecture="msil" />
     <commandLine file="designBIB.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="designBIB.exe" size="80384">
-      <assemblyIdentity name="designBIB" version="1.0.6110.18865" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="designBIB.exe" size="83456">
+      <assemblyIdentity name="designBIB" version="1.0.6123.22009" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2eFSTeD0Wh+AsttlSTgG0QWILuUq+ZQTpT0x2TUFLA4=</dsig:DigestValue>
+        <dsig:DigestValue>fGMDwBsTUeEljRpYITqtxS7MQBsY+86KGeDuv+Dtd70=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -95,3 +95,24 @@ C:\Users\Administratör\Desktop\program\Solution\designBIB\obj\Debug\designBIB.c
 C:\Users\Administratör\Desktop\program\Solution\designBIB\obj\Debug\designBIB.TrustInfo.xml
 C:\Users\Administratör\Desktop\program\Solution\designBIB\obj\Debug\designBIB.exe.manifest
 C:\Users\Administratör\Desktop\program\Solution\designBIB\obj\Debug\designBIB.application
+C:\IT Tekniker\program\Solution\designBIB\bin\Debug\designBIB.exe.config
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.exe
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.pdb
+C:\IT Tekniker\program\Solution\designBIB\bin\Debug\designBIB.exe.manifest
+C:\IT Tekniker\program\Solution\designBIB\bin\Debug\designBIB.application
+C:\IT Tekniker\program\Solution\designBIB\bin\Debug\designBIB.exe
+C:\IT Tekniker\program\Solution\designBIB\bin\Debug\designBIB.pdb
+C:\IT Tekniker\program\Solution\designBIB\bin\Debug\log4net.dll
+C:\IT Tekniker\program\Solution\designBIB\bin\Debug\LinqToExcel.xml
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.csprojResolveAssemblyReference.cache
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.Form1.resources
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.FrmProdukter.resources
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.FrmElever.resources
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.FrmService.resources
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.InfoFrame.resources
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.KlasserSettings.resources
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.Properties.Resources.resources
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.csproj.GenerateResource.Cache
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.TrustInfo.xml
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.exe.manifest
+C:\IT Tekniker\program\Solution\designBIB\obj\Debug\designBIB.application

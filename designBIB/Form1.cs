@@ -7,11 +7,14 @@ using System.Xml;
 using System.Xml.Linq;
 using designBIB.Properties;
 using MetroFramework.Forms;
+using OfficeOpenXml.FormulaParsing.Logging;
 
 namespace designBIB
 {
     public partial class Form1 : MetroForm
     {
+        public static string UserNameWhoFuckedItUp { get; private set; }
+        private readonly Logs _log = new Logs();
         public Form1()
         {
             InitializeComponent();
@@ -22,9 +25,11 @@ namespace designBIB
             Text = Text + Resources.Form1_Form1_Load__space +typeof(Form1).Assembly.GetName().Version;
             const string xmlfile = @"‪elever.xml";
             var doc = XDocument.Load(xmlfile);
-
+            _log.Logger(xmlfile + " loaded");
+            UserNameWhoFuckedItUp = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             const string xmlfile2 = @"‪klasser.xml";
             var doc2 = XDocument.Load(xmlfile2);
+            _log.Logger(xmlfile2 + " loaded");
             //var node = doc.Descendants().Where(n => n.Value == metroTextBox1.Text);
             //metroComboBox2.DataSource = node.ToList();
             var itemType = from key in doc2.Descendants("Row").Descendants("Klasser")
@@ -34,6 +39,8 @@ namespace designBIB
 
             metroComboBox1.DataSource = itemType.ToList();
             metroComboBox2.DataSource = namn.ToList();
+            
+            
         }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -132,9 +139,18 @@ namespace designBIB
                     doc.DocumentElement?.AppendChild(lanad);
                     fs.SetLength(0);
                     doc.Save(fs);
-/*
-                    doc = null;
-*/
+                    
+                    _log.Logger("Updated service for: " + user.InnerText + Environment.NewLine
+                        + "   info service number: "+ servicenummer.InnerText + Environment.NewLine
+                        + "   info service place: " + servicestalle.InnerText + Environment.NewLine
+                        + "   info contact information: " + kontaktinformation.InnerText + Environment.NewLine
+                        + "   info serialnumber: " + serienummer.InnerText + Environment.NewLine
+                        + "   info date: " + anmalningsdatum.InnerText + Environment.NewLine
+                        + "   info delivery date: " + leveransdatum.InnerText + Environment.NewLine
+                        + "   info problem: " + felbeskrvningxml.InnerText + Environment.NewLine
+                        + "   info correction: " + atgardxml.InnerText + Environment.NewLine
+                        + "   info sent?: " + skickad.InnerText + Environment.NewLine
+                        + "   info done?: " + fardig.InnerText + Environment.NewLine);
                     metroLabel1.Text =Resources.Form1_metroButton1_Click_Ärendet_är_upplagdt;
                 
             }

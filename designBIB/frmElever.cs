@@ -221,19 +221,25 @@ namespace designBIB
                 e.Cancel = true;
             }
         }
-        
+
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            _oldValue = (string) dataGridView1[e.ColumnIndex, e.RowIndex].Value;
+            if (dataGridView1[e.ColumnIndex, e.RowIndex].Value == null) return;
+            _oldValue = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
         }
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            _newValue = (string) dataGridView1[e.ColumnIndex, e.RowIndex].Value;
+
+            if (dataGridView1[e.ColumnIndex, e.RowIndex].Value == null) return;
+
+            _newValue = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
 
             if (_newValue != _oldValue)
             {
-                _log.Logger("changed value: " + _oldValue + " To: "+ _newValue);
+                var headerText =
+    dataGridView1.Columns[e.ColumnIndex].HeaderText;
+                _log.Logger("changed value: " + _oldValue + " To: " + _newValue + " Header: " + headerText);
             }
         }
     }

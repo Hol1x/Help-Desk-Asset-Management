@@ -111,17 +111,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKunder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKunder.Designer.cs">
+      <DependentUpon>frmKunder.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProdukter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmProdukter.Designer.cs">
       <DependentUpon>frmProdukter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmElever.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmElever.Designer.cs">
-      <DependentUpon>frmElever.cs</DependentUpon>
     </Compile>
     <Compile Include="frmService.cs">
       <SubType>Form</SubType>
@@ -156,11 +156,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKunder.resx">
+      <DependentUpon>frmKunder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProdukter.resx">
       <DependentUpon>frmProdukter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmElever.resx">
-      <DependentUpon>frmElever.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmService.resx">
       <DependentUpon>frmService.cs</DependentUpon>
@@ -181,8 +181,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="designBIB_1_TemporaryKey.pfx" />
-    <None Include="designBIB_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

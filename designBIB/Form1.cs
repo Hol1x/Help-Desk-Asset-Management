@@ -71,12 +71,13 @@ namespace designBIB
             //Console.Write(loadklass);
             reset_progressbar();
         }
-
+        // test things
         private void reset_progressbar()
         {
             metroProgressBar1.Value = 0;
         }
 
+        // gets the current time and date
         private static string GetTimestamp(DateTime value)
         {
             return value.ToString("yyyy/MM/dd/ HH:mm");
@@ -85,8 +86,9 @@ namespace designBIB
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            // check if there is a case already and just update it
             UpdateCheck();
-
+            // else just create one
             using (var fs = new FileStream(@"service.xml",
                 FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
             {

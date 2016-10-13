@@ -196,11 +196,11 @@ namespace designBIB
             this.metroLabel13.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel13.Location = new System.Drawing.Point(4, 108);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(119, 25);
+            this.metroLabel13.Size = new System.Drawing.Size(118, 25);
             this.metroLabel13.Style = MetroFramework.MetroColorStyle.Green;
             this.metroLabel13.StyleManager = null;
             this.metroLabel13.TabIndex = 27;
-            this.metroLabel13.Text = "Servicestalle";
+            this.metroLabel13.Text = "Serviceställe";
             this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel13.UseStyleColors = false;
             // 
@@ -214,7 +214,7 @@ namespace designBIB
             this.metroLabel18.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel18.Location = new System.Drawing.Point(395, 385);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(64, 25);
+            this.metroLabel18.Size = new System.Drawing.Size(65, 25);
             this.metroLabel18.Style = MetroFramework.MetroColorStyle.Green;
             this.metroLabel18.StyleManager = null;
             this.metroLabel18.TabIndex = 27;
@@ -379,7 +379,7 @@ namespace designBIB
             this.Servicelbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.Servicelbl.Location = new System.Drawing.Point(4, 79);
             this.Servicelbl.Name = "Servicelbl";
-            this.Servicelbl.Size = new System.Drawing.Size(145, 25);
+            this.Servicelbl.Size = new System.Drawing.Size(144, 25);
             this.Servicelbl.Style = MetroFramework.MetroColorStyle.Green;
             this.Servicelbl.StyleManager = null;
             this.Servicelbl.TabIndex = 27;
@@ -431,7 +431,7 @@ namespace designBIB
             this.metroLabel10.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel10.Location = new System.Drawing.Point(1016, 12);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(50, 19);
             this.metroLabel10.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel10.StyleManager = null;
             this.metroLabel10.TabIndex = 24;

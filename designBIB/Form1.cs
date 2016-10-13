@@ -43,8 +43,8 @@ namespace designBIB
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            const string xmlfile = "‪produkter.xml";
-            metroProgressBar1.Value = 20;
+            const string xmlfile = "‪Kunder.xml";
+            metroProgressBar1.Value = 0;
             var doc = XDocument.Load(xmlfile);
 
             metroProgressBar1.Value = 40;
@@ -67,17 +67,10 @@ namespace designBIB
                 metroProgressBar1.Value = 80;
                 Enhet_box.DataSource = serienummer.ToList();
             }
-            metroProgressBar1.Value = 100;
-            //Console.Write(loadklass);
-            reset_progressbar();
+           
         }
-        // test things
-        private void reset_progressbar()
-        {
-            metroProgressBar1.Value = 0;
-        }
-
-        // gets the current time and date
+      
+        // Hämtar tid och datum
         private static string GetTimestamp(DateTime value)
         {
             return value.ToString("yyyy/MM/dd/ HH:mm");
@@ -86,9 +79,9 @@ namespace designBIB
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            // check if there is a case already and just update it
+            // kollar om det finns nuvarande fil och isåfall uppdaterar den.
             UpdateCheck();
-            // else just create one
+            // Annars skapar vi en.
             using (var fs = new FileStream(@"service.xml",
                 FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
             {
@@ -179,7 +172,7 @@ namespace designBIB
                 xDoc.Save(fs);
             }
         }
-
+        // Läser in från XML Dokument.
         private void metroButton3_Click(object sender, EventArgs e)
         {
             using (var fs = new FileStream(@"service.xml",
@@ -358,7 +351,7 @@ namespace designBIB
                     metroProgressBar1.Value = 100;
                 } //Console.Write(loadklass);
             }
-            reset_progressbar();
+           
         }
 
         private void metroButton4_Click(object sender, EventArgs e)
